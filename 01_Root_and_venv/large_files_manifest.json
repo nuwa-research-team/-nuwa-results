@@ -1,0 +1,59 @@
+{
+  "format": "lossless-binary-parts-v1",
+  "files": [
+    {
+      "original_path": "results/evidence/classifier_checkpoints.zip",
+      "bytes": 15832088,
+      "sha256": "79662e6459bb5a6d58619a95035aef221051d92853336c25155e1155903f6196",
+      "parts": [
+        {
+          "path": "results/evidence/classifier_checkpoints.zip.parts/part_001.bin",
+          "bytes": 4194304,
+          "sha256": "6d1640706c39660ffb5d0689b7e2cb27de53dfd4da03e0e5e5ad391bc842cd34"
+        },
+        {
+          "path": "results/evidence/classifier_checkpoints.zip.parts/part_002.bin",
+          "bytes": 4194304,
+          "sha256": "c1b869791f6a09dfae8e768d7ecabd4f1faa590aa08077487ee67ebbf9bfb6fb"
+        },
+        {
+          "path": "results/evidence/classifier_checkpoints.zip.parts/part_003.bin",
+          "bytes": 4194304,
+          "sha256": "c7466952410126dc1c23e507017407a2e39bbc241aaddac271db64ce2822baee"
+        },
+        {
+          "path": "results/evidence/classifier_checkpoints.zip.parts/part_004.bin",
+          "bytes": 3249176,
+          "sha256": "1758e4da1ed1bc80c707c6a55dc34a21effb05d1e6583860e3a4dac1d76b8c67"
+        }
+      ]
+    },
+    {
+      "original_path": "results/evidence/first_round_predictions_and_masks.zip",
+      "bytes": 13968763,
+      "sha256": "2b07c3e1aefeb96ef3159c4c31610a6ef48a7afd8689ba3fa6e417a723a76b23",
+      "parts": [
+        {
+          "path": "results/evidence/first_round_predictions_and_masks.zip.parts/part_001.bin",
+          "bytes": 4194304,
+          "sha256": "999285c9fd086c9acda17a654f6fc7a92209564ea63dba72ae0da7fb67565835"
+        },
+        {
+          "path": "results/evidence/first_round_predictions_and_masks.zip.parts/part_002.bin",
+          "bytes": 4194304,
+          "sha256": "cb0807cd3f56e7ece85293a5535a4d9bc23d68a4c0a830f2dbba17df031c3fcf"
+        },
+        {
+          "path": "results/evidence/first_round_predictions_and_masks.zip.parts/part_003.bin",
+          "bytes": 4194304,
+          "sha256": "b37f8ad3557c10a8ee100360faf3236de52868e2fd9f1b43061336a7498fd41e"
+        },
+        {
+          "path": "results/evidence/first_round_predictions_and_masks.zip.parts/part_004.bin",
+          "bytes": 1385851,
+          "sha256": "d6fb93ee8af807bf36aed81356faa0a35fd1712222ba3b38b06c7b00106bf03d"
+        }
+      ]
+    }
+  ]
+}

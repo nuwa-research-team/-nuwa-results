@@ -1,0 +1,404 @@
+[
+  {
+    "destination": "data/README_SAMPLE_DOWNLOADS.md",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第4批_官方Nuwa代码\\upstream\\Nuwa\\code\\data\\README_样例下载.md",
+    "kind": "local download guide, not author code",
+    "sha256": "47a294814d9bf00c7a8c6662cfb3ac40292715c67aa0be5f9c1ecf81b16819fd"
+  },
+  {
+    "destination": "src/code/data_process/generate_timestamps.py",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第4批_官方Nuwa代码\\upstream\\Nuwa\\code\\data_process\\generate_timestamps.py",
+    "kind": "fourth-batch Nuwa upstream source, unchanged",
+    "sha256": "0a23cc042d910ac0be9edf46bf7c221d9f405cf6e67fe2d64b116494eff5d388"
+  },
+  {
+    "destination": "src/code/data_process/pcap2TCP.py",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第4批_官方Nuwa代码\\upstream\\Nuwa\\code\\data_process\\pcap2TCP.py",
+    "kind": "fourth-batch Nuwa upstream source, unchanged",
+    "sha256": "1454396c8e25a5f54a67a26cc804bb8a5173f223db00647de98cd342a0207f00"
+  },
+  {
+    "destination": "src/code/data_process/session2features.py",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第4批_官方Nuwa代码\\upstream\\Nuwa\\code\\data_process\\session2features.py",
+    "kind": "fourth-batch Nuwa upstream source, unchanged",
+    "sha256": "d03b5f835225a2f71f52d6a7001afa3d3b6a6233471d78cc74b9d63a19eb6d71"
+  },
+  {
+    "destination": "src/code/data_process/train_test_data.py",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第4批_官方Nuwa代码\\upstream\\Nuwa\\code\\data_process\\train_test_data.py",
+    "kind": "fourth-batch Nuwa upstream source, unchanged",
+    "sha256": "b9672d720fcfa0e51bf105d1d457168e54bd88c7fd1fdefa48300992191aa184"
+  },
+  {
+    "destination": "src/code/data_process/txt_roberta.py",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第4批_官方Nuwa代码\\upstream\\Nuwa\\code\\data_process\\txt_roberta.py",
+    "kind": "fourth-batch Nuwa upstream source, unchanged",
+    "sha256": "f3a7a18d3f4260c3b7430d78161225115d6f69171cb82d36e52b53a67ca2acc1"
+  },
+  {
+    "destination": "src/code/impute_missing_features.py",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第4批_官方Nuwa代码\\upstream\\Nuwa\\code\\impute_missing_features.py",
+    "kind": "fourth-batch Nuwa upstream source, unchanged",
+    "sha256": "ebef162e4c6bf508eb91881e2f91f6760a4c55bdbd2ed022e8ce0c2741c1484d"
+  },
+  {
+    "destination": "src/code/pre-training.py",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第4批_官方Nuwa代码\\upstream\\Nuwa\\code\\pre-training.py",
+    "kind": "fourth-batch Nuwa upstream source, unchanged",
+    "sha256": "8db415d8e3c7c6759d5f2117bae4fb1db13b97d5e81db3e109347dc173aebad4"
+  },
+  {
+    "destination": "src/code/test.py",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第4批_官方Nuwa代码\\upstream\\Nuwa\\code\\test.py",
+    "kind": "fourth-batch Nuwa upstream source, unchanged",
+    "sha256": "412a8da13330793d63a3a17bed32c76be361edad27fe0f6a0ceb144d3f0aa50e"
+  },
+  {
+    "destination": "src/code/TFM.py",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第4批_官方Nuwa代码\\upstream\\Nuwa\\code\\TFM.py",
+    "kind": "fourth-batch Nuwa upstream source, unchanged",
+    "sha256": "dded0f97b389ee24cec2dcd5226f0a5377e1fceae2fdd1a4d24e3657da5e06ad"
+  },
+  {
+    "destination": "src/README.md",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第4批_官方Nuwa代码\\upstream\\Nuwa\\README.md",
+    "kind": "fourth-batch Nuwa upstream source, unchanged",
+    "sha256": "0f8d5281a00d6310f81b9cb5edb665e70dd6884d8cd912f59bedd7f0f3172622"
+  },
+  {
+    "destination": "Paper/Nuwa_Supplementary_Material.pdf",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第2批_论文资料\\papers\\Nuwa_Supplementary_Material.pdf",
+    "kind": "paper / supplementary material",
+    "sha256": "e2d3f7dc00483cb5f1d03fb737875e779cb12fdeaca5a9066276b5aefe95d0a1"
+  },
+  {
+    "destination": "Paper/Nuwa_TON_2025.pdf",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第2批_论文资料\\papers\\Nuwa_TON_2025.pdf",
+    "kind": "paper / supplementary material",
+    "sha256": "3ee5e1c904332807139b72a258efa0590e7d2e5984bc013eea21f2cf45677081"
+  },
+  {
+    "destination": "Paper/paper_text.txt",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第2批_论文资料\\papers\\paper_text.txt",
+    "kind": "paper / supplementary material",
+    "sha256": "dd66f0d6606703fb4417ca6d317024a82a105e1fb9b783dbcf83e18eee5cc702"
+  },
+  {
+    "destination": "Paper/supplementary_text.txt",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第2批_论文资料\\papers\\supplementary_text.txt",
+    "kind": "paper / supplementary material",
+    "sha256": "27d12c009c07a83e4087bc8e3178afb54fc3459a8d4e771d0b3a428e40096932"
+  },
+  {
+    "destination": "Paper/ARCHITECTURE_AND_CODE_AUDIT.md",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第1批_说明与配置\\docs\\ARCHITECTURE_AND_CODE_AUDIT.md",
+    "kind": "research and reproduction notes",
+    "sha256": "8b0ede4e49d7270628cd49aa76b8f8ee9005e4d30158311dd503bc176da4b08c"
+  },
+  {
+    "destination": "Paper/AUTHOR_QUESTIONS.md",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第1批_说明与配置\\docs\\AUTHOR_QUESTIONS.md",
+    "kind": "research and reproduction notes",
+    "sha256": "cc3573fec598a7f28081649202d7eca42b6e99c292dfb37ce08118cf8d7c67ef"
+  },
+  {
+    "destination": "Paper/DATASETS.md",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第1批_说明与配置\\docs\\DATASETS.md",
+    "kind": "research and reproduction notes",
+    "sha256": "ffa05a98fe8375a121c362e9352cb744ad0470d77ac1c08615fc2269a26bea2f"
+  },
+  {
+    "destination": "Paper/REPRODUCTION_PROTOCOL.md",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第1批_说明与配置\\docs\\REPRODUCTION_PROTOCOL.md",
+    "kind": "research and reproduction notes",
+    "sha256": "bf7e3adbe030c1a9b8a364ab4331ae5a1a12fc8550580a656f616628f061e9ec"
+  },
+  {
+    "destination": "Paper/DATA_REQUIREMENTS.md",
+    "source": "D:\\NIDS_Research\\nuwa_reproduction_20261109\\shared\\需师兄协助补齐的数据与口径_20261110.md",
+    "kind": "current missing-data disclosure",
+    "sha256": "279593d20ff3fc5769459149be627714293bf8c9febc97ac3aebe02fdf754107"
+  },
+  {
+    "destination": "data/d4_ustc/raw.pkl",
+    "source": "D:\\NIDS_Research\\nuwa_reproduction_20261109\\audit\\paired_snapshot_20261110\\work\\d4_aligned\\raw.pkl",
+    "kind": "actual train/val/test sequence snapshot",
+    "sha256": "312617767197cad4c931dbc57f8fdaead8185c13e6e9e10b07458ce3ffabb3d6"
+  },
+  {
+    "destination": "data/manifests/ustc_download_manifest.json",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第1批_说明与配置\\manifests\\ustc_download_manifest.json",
+    "kind": "data source manifest",
+    "sha256": "7ad20ab329ed5915e212c97bf02840b932bbf625d8b238119120922e784733a0"
+  },
+  {
+    "destination": "data/manifests/andmal_download_links.json",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第1批_说明与配置\\manifests\\andmal_download_links.json",
+    "kind": "data source manifest",
+    "sha256": "8966a5f764aa4c83a1e438dc621c90b4b7d9ac6bfd1284ec39390356674b8b15"
+  },
+  {
+    "destination": "data/manifests/iot_download_links.json",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第1批_说明与配置\\manifests\\iot_download_links.json",
+    "kind": "data source manifest",
+    "sha256": "442874f67db14fdcbe27fe60ffc106c68899889127ba6aa47417218fef55d50b"
+  },
+  {
+    "destination": "data/manifests/upstream_commits.json",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第1批_说明与配置\\manifests\\upstream_commits.json",
+    "kind": "data source manifest",
+    "sha256": "7b0c4eaefdb9b9856d3100349604ffa0e1bf733e4a70d4cccab8a23a7f1dd7fd"
+  },
+  {
+    "destination": "data/author_configs/d1/config.json",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第1批_说明与配置\\configs\\d1\\config.json",
+    "kind": "published author config/vocabulary, not complete model weights",
+    "sha256": "82b22709e2d7316a13c40f8de93b25fa2e71c746c617ede59e31305f63bb0d98"
+  },
+  {
+    "destination": "data/author_configs/d1/wordlevel.json",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第1批_说明与配置\\configs\\d1\\wordlevel.json",
+    "kind": "published author config/vocabulary, not complete model weights",
+    "sha256": "c8e865f02d17446e1b39dfa93f699b1641fb5c3711a77adf00fd497554e4b483"
+  },
+  {
+    "destination": "data/author_configs/d2/config.json",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第1批_说明与配置\\configs\\d2\\config.json",
+    "kind": "published author config/vocabulary, not complete model weights",
+    "sha256": "f87a554221c2f378e9fe4c70b43592f4a9a4d20dafc979224c7d42598dfa252a"
+  },
+  {
+    "destination": "data/author_configs/d2/wordlevel.json",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第1批_说明与配置\\configs\\d2\\wordlevel.json",
+    "kind": "published author config/vocabulary, not complete model weights",
+    "sha256": "a1ad43a9dc3286d78dbe4501e8673c9c55ca66860835323df039031101e4ff3b"
+  },
+  {
+    "destination": "data/author_configs/d3/config.json",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第1批_说明与配置\\configs\\d3\\config.json",
+    "kind": "published author config/vocabulary, not complete model weights",
+    "sha256": "81ba5c1043d4b54efe6107b042fe5773875f7b0b79162159db0053886e2a618a"
+  },
+  {
+    "destination": "data/author_configs/d3/wordlevel.json",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第1批_说明与配置\\configs\\d3\\wordlevel.json",
+    "kind": "published author config/vocabulary, not complete model weights",
+    "sha256": "93d62a97a66c89fda344e6e33048b3a824ecbcd11004eeab3b2f166c32181549"
+  },
+  {
+    "destination": "data/author_configs/d4/config.json",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第1批_说明与配置\\configs\\d4\\config.json",
+    "kind": "published author config/vocabulary, not complete model weights",
+    "sha256": "b00da62060c37767f880a0049af1216f1ed409231e8ed9f9e4bbd21843190bc6"
+  },
+  {
+    "destination": "data/author_configs/d4/wordlevel.json",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第1批_说明与配置\\configs\\d4\\wordlevel.json",
+    "kind": "published author config/vocabulary, not complete model weights",
+    "sha256": "4b6ec060be03beeb370ff360a930c98de213d832e2c0aec7b95e1dfa47608f66"
+  },
+  {
+    "destination": "data/DOWNLOAD_LIST.md",
+    "source": "D:\\NIDS_Research\\nuwa_reproduction_20261109\\shared\\手动下载清单_Nuwa两项实验_20261110.md",
+    "kind": "raw-data download list",
+    "sha256": "a551e5dbf8751425398c45ee3039b4cb248e0498f614ec94eaa90b53c7a36dc3"
+  },
+  {
+    "destination": "results/first_round/evaluation_run.json",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第6批_结果与复核_20261110\\evaluation_run.json",
+    "kind": "audited result report",
+    "sha256": "f1960a9d27f66b8fd242a4afeec217b59187cbc3bf36171e5c9e0b870299e758"
+  },
+  {
+    "destination": "results/first_round/independent_audit.json",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第6批_结果与复核_20261110\\independent_audit.json",
+    "kind": "audited result report",
+    "sha256": "017ec243350d88e41344841d4b7ebf0891c4dcd19710838b547284173a3fbc84"
+  },
+  {
+    "destination": "results/first_round/manifest.json",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第6批_结果与复核_20261110\\manifest.json",
+    "kind": "audited result report",
+    "sha256": "b773ff14b39264abf1271f8b17101cc44afb75e9fcac05dbab6ec8a1a563883e"
+  },
+  {
+    "destination": "results/first_round/metrics_132.json",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第6批_结果与复核_20261110\\metrics_132.json",
+    "kind": "audited result report",
+    "sha256": "955ff8c06f5c10928d48cb5d52b9a86c356dd3f3ea771b247f7bc5ece7134a54"
+  },
+  {
+    "destination": "results/first_round/复现进度与原文对照_首轮.md",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第6批_结果与复核_20261110\\复现进度与原文对照_首轮.md",
+    "kind": "audited result report",
+    "sha256": "fa0d3fa484e3c692c015f29a77b6bd06b9d17c96e93084df081e11198b99d5d0"
+  },
+  {
+    "destination": "results/first_round/需补齐的数据与口径.md",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第6批_结果与复核_20261110\\需补齐的数据与口径.md",
+    "kind": "audited result report",
+    "sha256": "279593d20ff3fc5769459149be627714293bf8c9febc97ac3aebe02fdf754107"
+  },
+  {
+    "destination": "results/revised/evaluation_run_修订.json",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第7批_修订后结果_20261110\\evaluation_run_修订.json",
+    "kind": "audited result report",
+    "sha256": "8e609f07375dc8c7c0fe06d8a5ad1fb6abf644329c9304f42b5e98bf7406c4c8"
+  },
+  {
+    "destination": "results/revised/independent_audit_修订66.json",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第7批_修订后结果_20261110\\independent_audit_修订66.json",
+    "kind": "audited result report",
+    "sha256": "3f7866fccadea83f34356024a3e36bc3793a93d485480d65aedeccce5947a6af"
+  },
+  {
+    "destination": "results/revised/manifest.json",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第7批_修订后结果_20261110\\manifest.json",
+    "kind": "audited result report",
+    "sha256": "7a5f3e0159aaa29952a60d28108291e22d5b22794200e926480c96d103713b56"
+  },
+  {
+    "destination": "results/revised/metrics_修订66.json",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第7批_修订后结果_20261110\\metrics_修订66.json",
+    "kind": "audited result report",
+    "sha256": "cd94cdfd10d77ca3d646ef7b1cb4805f41f556fa8aa59f66fc4b2d5da52e1120"
+  },
+  {
+    "destination": "results/revised/metrics_合并132.json",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第7批_修订后结果_20261110\\metrics_合并132.json",
+    "kind": "audited result report",
+    "sha256": "f5d822c7c340653d76a55314f31f64589c42571b2187d795dda7316e35aa33e8"
+  },
+  {
+    "destination": "results/revised/protocol_修订.json",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第7批_修订后结果_20261110\\protocol_修订.json",
+    "kind": "audited result report",
+    "sha256": "2adc6807cc04dc1530fb9c2d395b783ef44860789a8dbf136585ad36b0f7c579"
+  },
+  {
+    "destination": "results/revised/两项实验_修订结果与原文对照.md",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第7批_修订后结果_20261110\\两项实验_修订结果与原文对照.md",
+    "kind": "audited result report",
+    "sha256": "7acddd7a3e105e85ecd67ff5036ee664cbb784df01c7a426cbc3078d2b69bf2a"
+  },
+  {
+    "destination": "results/revised/需补齐的数据与口径.md",
+    "source": "C:\\Users\\王\\Desktop\\GitHub上传资料\\第7批_修订后结果_20261110\\需补齐的数据与口径.md",
+    "kind": "audited result report",
+    "sha256": "279593d20ff3fc5769459149be627714293bf8c9febc97ac3aebe02fdf754107"
+  },
+  {
+    "destination": "results/viewer/data_requirements.md",
+    "source": "C:\\Users\\王\\Desktop\\Nuwa_Experiment_Results_20261110\\data_requirements.md",
+    "kind": "offline result viewer with embedded measurements",
+    "sha256": "bfccda04fad56e3e11fd0e1b80b4194666752fa47b8bcfc4423415ac9b6d87f2"
+  },
+  {
+    "destination": "results/viewer/experiment_data.json",
+    "source": "C:\\Users\\王\\Desktop\\Nuwa_Experiment_Results_20261110\\experiment_data.json",
+    "kind": "offline result viewer with embedded measurements",
+    "sha256": "2ca7579a4596acb8d5156ea71070b31a01a68d6663735ea11c4b1df97beb953a"
+  },
+  {
+    "destination": "results/viewer/index.html",
+    "source": "C:\\Users\\王\\Desktop\\Nuwa_Experiment_Results_20261110\\index.html",
+    "kind": "offline result viewer with embedded measurements",
+    "sha256": "326acf3530b16bfb6a69ef001d6f94dfcf9ff34a174abda8e18de0e5d1f69615"
+  },
+  {
+    "destination": "results/viewer/manifest.json",
+    "source": "C:\\Users\\王\\Desktop\\Nuwa_Experiment_Results_20261110\\manifest.json",
+    "kind": "offline result viewer with embedded measurements",
+    "sha256": "1c25eb0103f855e3365d68b9e4d7e1607752e62bbb70b18b230c754ada30fd7a"
+  },
+  {
+    "destination": "results/viewer/paper_reference_extraction.csv",
+    "source": "C:\\Users\\王\\Desktop\\Nuwa_Experiment_Results_20261110\\paper_reference_extraction.csv",
+    "kind": "offline result viewer with embedded measurements",
+    "sha256": "e59a89542925e142d1d25a42e2d1e01cd7f2fb5b5fe38cb60ca8259d51ee18a8"
+  },
+  {
+    "destination": "results/viewer/preview.png",
+    "source": "C:\\Users\\王\\Desktop\\Nuwa_Experiment_Results_20261110\\preview.png",
+    "kind": "offline result viewer with embedded measurements",
+    "sha256": "d5e64f7bcb213ab82e0c23053c07f1c8ad0e7f0b95a8cacef944f73c95506d21"
+  },
+  {
+    "destination": "results/viewer/README.txt",
+    "source": "C:\\Users\\王\\Desktop\\Nuwa_Experiment_Results_20261110\\README.txt",
+    "kind": "offline result viewer with embedded measurements",
+    "sha256": "bdaca57526cd2560fd24151325bbc4e2d15b4f79eea7bfba6f351de4bb46fbf3"
+  },
+  {
+    "destination": "results/viewer/results_comparison.md",
+    "source": "C:\\Users\\王\\Desktop\\Nuwa_Experiment_Results_20261110\\results_comparison.md",
+    "kind": "offline result viewer with embedded measurements",
+    "sha256": "052d60e29bc62acb883b401b5c229d8ee1e637045a1f1132af3b2dd7a3bbdf86"
+  },
+  {
+    "destination": "results/viewer/source_data/first_round_132.json",
+    "source": "C:\\Users\\王\\Desktop\\Nuwa_Experiment_Results_20261110\\source_data\\first_round_132.json",
+    "kind": "offline result viewer with embedded measurements",
+    "sha256": "955ff8c06f5c10928d48cb5d52b9a86c356dd3f3ea771b247f7bc5ece7134a54"
+  },
+  {
+    "destination": "results/viewer/source_data/first_round_audit.json",
+    "source": "C:\\Users\\王\\Desktop\\Nuwa_Experiment_Results_20261110\\source_data\\first_round_audit.json",
+    "kind": "offline result viewer with embedded measurements",
+    "sha256": "017ec243350d88e41344841d4b7ebf0891c4dcd19710838b547284173a3fbc84"
+  },
+  {
+    "destination": "results/viewer/source_data/revised_66.json",
+    "source": "C:\\Users\\王\\Desktop\\Nuwa_Experiment_Results_20261110\\source_data\\revised_66.json",
+    "kind": "offline result viewer with embedded measurements",
+    "sha256": "cd94cdfd10d77ca3d646ef7b1cb4805f41f556fa8aa59f66fc4b2d5da52e1120"
+  },
+  {
+    "destination": "results/viewer/source_data/revised_audit.json",
+    "source": "C:\\Users\\王\\Desktop\\Nuwa_Experiment_Results_20261110\\source_data\\revised_audit.json",
+    "kind": "offline result viewer with embedded measurements",
+    "sha256": "3f7866fccadea83f34356024a3e36bc3793a93d485480d65aedeccce5947a6af"
+  },
+  {
+    "destination": "results/viewer/source_data/revision_protocol.json",
+    "source": "C:\\Users\\王\\Desktop\\Nuwa_Experiment_Results_20261110\\source_data\\revision_protocol.json",
+    "kind": "offline result viewer with embedded measurements",
+    "sha256": "2adc6807cc04dc1530fb9c2d395b783ef44860789a8dbf136585ad36b0f7c579"
+  },
+  {
+    "destination": "results/viewer/validation.json",
+    "source": "C:\\Users\\王\\Desktop\\Nuwa_Experiment_Results_20261110\\validation.json",
+    "kind": "offline result viewer with embedded measurements",
+    "sha256": "c49b8f611a81f4f94993d3c41cfb9c717d06b79d2d2a0ea8f107ef9bdcb8eccb"
+  },
+  {
+    "destination": "results/evidence/first_round_predictions_and_masks.zip",
+    "kind": "lossless evidence archive",
+    "members": 157,
+    "sha256": "2b07c3e1aefeb96ef3159c4c31610a6ef48a7afd8689ba3fa6e417a723a76b23"
+  },
+  {
+    "destination": "results/evidence/revised_predictions.zip",
+    "kind": "lossless evidence archive",
+    "members": 70,
+    "sha256": "c01606a3a5d6b4e18ca8862b1edd70423be1c7a7e19ef906b2b880423caf68cc"
+  },
+  {
+    "destination": "results/evidence/classifier_checkpoints.zip",
+    "kind": "lossless evidence archive",
+    "members": 9,
+    "sha256": "79662e6459bb5a6d58619a95035aef221051d92853336c25155e1155903f6196"
+  },
+  {
+    "destination": "results/evidence/execution_code.zip",
+    "kind": "lossless evidence archive",
+    "members": 43,
+    "sha256": "710ab8fe57a5639e4b1508298c84f6a8f597c9f253c7529ca6ab5eb0962aa6ac"
+  },
+  {
+    "destination": "results/evidence/early_helpers_and_reference_baselines.zip",
+    "kind": "lossless evidence archive",
+    "members": 42,
+    "sha256": "22dae2a38a1d269f7a5e34f1df0b2b2216e5571c5b5f68745d4378a170997ee0"
+  }
+]
