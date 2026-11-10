@@ -1,0 +1,17 @@
+{
+  "template_schema_validation": "PASS (ReviewCore.validate)",
+  "source_metric_equality_checks": 1380,
+  "source_metric_equality": "PASS",
+  "html_embedded_data_equals_json": "PASS",
+  "browser_checks": [
+    "default robustness table",
+    "SOTA30% table",
+    "row detail and prediction hash",
+    "paper83.47/83.08 reference",
+    "audit deviation visible"
+  ],
+  "tables": 10,
+  "rows": 487,
+  "no_new_training": true,
+  "strict_paper_reproduction": false
+}

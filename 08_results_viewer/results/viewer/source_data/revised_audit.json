@@ -1,0 +1,556 @@
+{
+  "scope": "USTC eight-class engineering adaptation, three repaired classifiers",
+  "strict_paper_reproduction": false,
+  "training_reproduction": false,
+  "cells": 66,
+  "metric_and_identity_audit": "PASS",
+  "metric_checks": [
+    {
+      "classifier": "tst",
+      "method": "clean",
+      "loss_percent": 0,
+      "status": "PASS"
+    },
+    {
+      "classifier": "tst",
+      "method": "deletion",
+      "loss_percent": 10,
+      "status": "PASS"
+    },
+    {
+      "classifier": "tst",
+      "method": "ZeroPad",
+      "loss_percent": 10,
+      "status": "PASS"
+    },
+    {
+      "classifier": "tst",
+      "method": "Markov",
+      "loss_percent": 10,
+      "status": "PASS"
+    },
+    {
+      "classifier": "tst",
+      "method": "tfi",
+      "loss_percent": 10,
+      "status": "PASS"
+    },
+    {
+      "classifier": "tst",
+      "method": "bert",
+      "loss_percent": 10,
+      "status": "PASS"
+    },
+    {
+      "classifier": "tst",
+      "method": "roberta",
+      "loss_percent": 10,
+      "status": "PASS"
+    },
+    {
+      "classifier": "tst",
+      "method": "deberta",
+      "loss_percent": 10,
+      "status": "PASS"
+    },
+    {
+      "classifier": "tst",
+      "method": "deletion",
+      "loss_percent": 20,
+      "status": "PASS"
+    },
+    {
+      "classifier": "tst",
+      "method": "ZeroPad",
+      "loss_percent": 20,
+      "status": "PASS"
+    },
+    {
+      "classifier": "tst",
+      "method": "Markov",
+      "loss_percent": 20,
+      "status": "PASS"
+    },
+    {
+      "classifier": "tst",
+      "method": "tfi",
+      "loss_percent": 20,
+      "status": "PASS"
+    },
+    {
+      "classifier": "tst",
+      "method": "bert",
+      "loss_percent": 20,
+      "status": "PASS"
+    },
+    {
+      "classifier": "tst",
+      "method": "roberta",
+      "loss_percent": 20,
+      "status": "PASS"
+    },
+    {
+      "classifier": "tst",
+      "method": "deberta",
+      "loss_percent": 20,
+      "status": "PASS"
+    },
+    {
+      "classifier": "tst",
+      "method": "deletion",
+      "loss_percent": 30,
+      "status": "PASS"
+    },
+    {
+      "classifier": "tst",
+      "method": "ZeroPad",
+      "loss_percent": 30,
+      "status": "PASS"
+    },
+    {
+      "classifier": "tst",
+      "method": "Markov",
+      "loss_percent": 30,
+      "status": "PASS"
+    },
+    {
+      "classifier": "tst",
+      "method": "tfi",
+      "loss_percent": 30,
+      "status": "PASS"
+    },
+    {
+      "classifier": "tst",
+      "method": "bert",
+      "loss_percent": 30,
+      "status": "PASS"
+    },
+    {
+      "classifier": "tst",
+      "method": "roberta",
+      "loss_percent": 30,
+      "status": "PASS"
+    },
+    {
+      "classifier": "tst",
+      "method": "deberta",
+      "loss_percent": 30,
+      "status": "PASS"
+    },
+    {
+      "classifier": "fsnet",
+      "method": "clean",
+      "loss_percent": 0,
+      "status": "PASS"
+    },
+    {
+      "classifier": "fsnet",
+      "method": "deletion",
+      "loss_percent": 10,
+      "status": "PASS"
+    },
+    {
+      "classifier": "fsnet",
+      "method": "ZeroPad",
+      "loss_percent": 10,
+      "status": "PASS"
+    },
+    {
+      "classifier": "fsnet",
+      "method": "Markov",
+      "loss_percent": 10,
+      "status": "PASS"
+    },
+    {
+      "classifier": "fsnet",
+      "method": "tfi",
+      "loss_percent": 10,
+      "status": "PASS"
+    },
+    {
+      "classifier": "fsnet",
+      "method": "bert",
+      "loss_percent": 10,
+      "status": "PASS"
+    },
+    {
+      "classifier": "fsnet",
+      "method": "roberta",
+      "loss_percent": 10,
+      "status": "PASS"
+    },
+    {
+      "classifier": "fsnet",
+      "method": "deberta",
+      "loss_percent": 10,
+      "status": "PASS"
+    },
+    {
+      "classifier": "fsnet",
+      "method": "deletion",
+      "loss_percent": 20,
+      "status": "PASS"
+    },
+    {
+      "classifier": "fsnet",
+      "method": "ZeroPad",
+      "loss_percent": 20,
+      "status": "PASS"
+    },
+    {
+      "classifier": "fsnet",
+      "method": "Markov",
+      "loss_percent": 20,
+      "status": "PASS"
+    },
+    {
+      "classifier": "fsnet",
+      "method": "tfi",
+      "loss_percent": 20,
+      "status": "PASS"
+    },
+    {
+      "classifier": "fsnet",
+      "method": "bert",
+      "loss_percent": 20,
+      "status": "PASS"
+    },
+    {
+      "classifier": "fsnet",
+      "method": "roberta",
+      "loss_percent": 20,
+      "status": "PASS"
+    },
+    {
+      "classifier": "fsnet",
+      "method": "deberta",
+      "loss_percent": 20,
+      "status": "PASS"
+    },
+    {
+      "classifier": "fsnet",
+      "method": "deletion",
+      "loss_percent": 30,
+      "status": "PASS"
+    },
+    {
+      "classifier": "fsnet",
+      "method": "ZeroPad",
+      "loss_percent": 30,
+      "status": "PASS"
+    },
+    {
+      "classifier": "fsnet",
+      "method": "Markov",
+      "loss_percent": 30,
+      "status": "PASS"
+    },
+    {
+      "classifier": "fsnet",
+      "method": "tfi",
+      "loss_percent": 30,
+      "status": "PASS"
+    },
+    {
+      "classifier": "fsnet",
+      "method": "bert",
+      "loss_percent": 30,
+      "status": "PASS"
+    },
+    {
+      "classifier": "fsnet",
+      "method": "roberta",
+      "loss_percent": 30,
+      "status": "PASS"
+    },
+    {
+      "classifier": "fsnet",
+      "method": "deberta",
+      "loss_percent": 30,
+      "status": "PASS"
+    },
+    {
+      "classifier": "sdae",
+      "method": "clean",
+      "loss_percent": 0,
+      "status": "PASS"
+    },
+    {
+      "classifier": "sdae",
+      "method": "deletion",
+      "loss_percent": 10,
+      "status": "PASS"
+    },
+    {
+      "classifier": "sdae",
+      "method": "ZeroPad",
+      "loss_percent": 10,
+      "status": "PASS"
+    },
+    {
+      "classifier": "sdae",
+      "method": "Markov",
+      "loss_percent": 10,
+      "status": "PASS"
+    },
+    {
+      "classifier": "sdae",
+      "method": "tfi",
+      "loss_percent": 10,
+      "status": "PASS"
+    },
+    {
+      "classifier": "sdae",
+      "method": "bert",
+      "loss_percent": 10,
+      "status": "PASS"
+    },
+    {
+      "classifier": "sdae",
+      "method": "roberta",
+      "loss_percent": 10,
+      "status": "PASS"
+    },
+    {
+      "classifier": "sdae",
+      "method": "deberta",
+      "loss_percent": 10,
+      "status": "PASS"
+    },
+    {
+      "classifier": "sdae",
+      "method": "deletion",
+      "loss_percent": 20,
+      "status": "PASS"
+    },
+    {
+      "classifier": "sdae",
+      "method": "ZeroPad",
+      "loss_percent": 20,
+      "status": "PASS"
+    },
+    {
+      "classifier": "sdae",
+      "method": "Markov",
+      "loss_percent": 20,
+      "status": "PASS"
+    },
+    {
+      "classifier": "sdae",
+      "method": "tfi",
+      "loss_percent": 20,
+      "status": "PASS"
+    },
+    {
+      "classifier": "sdae",
+      "method": "bert",
+      "loss_percent": 20,
+      "status": "PASS"
+    },
+    {
+      "classifier": "sdae",
+      "method": "roberta",
+      "loss_percent": 20,
+      "status": "PASS"
+    },
+    {
+      "classifier": "sdae",
+      "method": "deberta",
+      "loss_percent": 20,
+      "status": "PASS"
+    },
+    {
+      "classifier": "sdae",
+      "method": "deletion",
+      "loss_percent": 30,
+      "status": "PASS"
+    },
+    {
+      "classifier": "sdae",
+      "method": "ZeroPad",
+      "loss_percent": 30,
+      "status": "PASS"
+    },
+    {
+      "classifier": "sdae",
+      "method": "Markov",
+      "loss_percent": 30,
+      "status": "PASS"
+    },
+    {
+      "classifier": "sdae",
+      "method": "tfi",
+      "loss_percent": 30,
+      "status": "PASS"
+    },
+    {
+      "classifier": "sdae",
+      "method": "bert",
+      "loss_percent": 30,
+      "status": "PASS"
+    },
+    {
+      "classifier": "sdae",
+      "method": "roberta",
+      "loss_percent": 30,
+      "status": "PASS"
+    },
+    {
+      "classifier": "sdae",
+      "method": "deberta",
+      "loss_percent": 30,
+      "status": "PASS"
+    }
+  ],
+  "checkpoint_checks": [
+    {
+      "model": "tst",
+      "status": "PASS",
+      "epochs_run": 15,
+      "supervised_seconds": 630.1,
+      "checkpoint_sha256": "fd668bce77a2ed214254334816c357d554eb79bf15a1a42d7ab44c255ca922f0",
+      "meta_source_hash_may_be_recorded_at_finish": true
+    },
+    {
+      "model": "fsnet",
+      "status": "PASS",
+      "epochs_run": 15,
+      "supervised_seconds": 238.1,
+      "checkpoint_sha256": "1c969756566c3aeb06ddcdd759d2d20edb15e31aa37f4337749d7f75abf10b84",
+      "meta_source_hash_may_be_recorded_at_finish": true
+    },
+    {
+      "model": "sdae",
+      "status": "PASS",
+      "epochs_run": 8,
+      "supervised_seconds": 37.6,
+      "checkpoint_sha256": "d6591dde701a020c0f355edb5fe2467ffebb3b46db864299493daef468b3c03b",
+      "meta_source_hash_may_be_recorded_at_finish": true
+    }
+  ],
+  "paired_source_checks": [
+    {
+      "file": "mask_10.npz",
+      "status": "PASS"
+    },
+    {
+      "file": "mask_20.npz",
+      "status": "PASS"
+    },
+    {
+      "file": "mask_30.npz",
+      "status": "PASS"
+    },
+    {
+      "file": "bert_imputed_10.npz",
+      "status": "PASS"
+    },
+    {
+      "file": "bert_imputed_20.npz",
+      "status": "PASS"
+    },
+    {
+      "file": "bert_imputed_30.npz",
+      "status": "PASS"
+    },
+    {
+      "file": "deberta_imputed_10.npz",
+      "status": "PASS"
+    },
+    {
+      "file": "deberta_imputed_20.npz",
+      "status": "PASS"
+    },
+    {
+      "file": "deberta_imputed_30.npz",
+      "status": "PASS"
+    },
+    {
+      "file": "roberta_imputed_10.npz",
+      "status": "PASS"
+    },
+    {
+      "file": "roberta_imputed_20.npz",
+      "status": "PASS"
+    },
+    {
+      "file": "roberta_imputed_30.npz",
+      "status": "PASS"
+    },
+    {
+      "file": "tfi_imputed_10.npz",
+      "status": "PASS"
+    },
+    {
+      "file": "tfi_imputed_20.npz",
+      "status": "PASS"
+    },
+    {
+      "file": "tfi_imputed_30.npz",
+      "status": "PASS"
+    }
+  ],
+  "cpu_sample_replays": [
+    {
+      "classifier": "tst",
+      "method": "clean",
+      "loss_percent": 0,
+      "rows": 32,
+      "prediction_differences": 0
+    },
+    {
+      "classifier": "tst",
+      "method": "tfi",
+      "loss_percent": 30,
+      "rows": 32,
+      "prediction_differences": 0
+    },
+    {
+      "classifier": "fsnet",
+      "method": "clean",
+      "loss_percent": 0,
+      "rows": 32,
+      "prediction_differences": 0
+    },
+    {
+      "classifier": "fsnet",
+      "method": "tfi",
+      "loss_percent": 30,
+      "rows": 32,
+      "prediction_differences": 0
+    },
+    {
+      "classifier": "sdae",
+      "method": "clean",
+      "loss_percent": 0,
+      "rows": 32,
+      "prediction_differences": 0
+    },
+    {
+      "classifier": "sdae",
+      "method": "tfi",
+      "loss_percent": 30,
+      "rows": 32,
+      "prediction_differences": 0
+    }
+  ],
+  "cpu_sample_rule": "first 32 saved prediction rows per model/condition; not full-test replay",
+  "protocol_source_hash_consistency": {
+    "train": {
+      "declared": "987e635abd952c5e40a5f5cb980b4f6c8217746982277a6a248cbe28cc861d45",
+      "actual_evaluation_source": "4514bb0d31c2311ac40c0d568ca1644c6bb03b8884b44ed25c2d3c7cf0ddd865",
+      "match": false
+    },
+    "models": {
+      "declared": "e0453779493232f480efb39060b004c48b82f6020572409560454b169706cb5b",
+      "actual_evaluation_source": "e0453779493232f480efb39060b004c48b82f6020572409560454b169706cb5b",
+      "match": true
+    },
+    "eval": {
+      "declared": "8f2620a24c5f7dd3df974295f5d3825b47597952f2089599545fd91ef367b41a",
+      "actual_evaluation_source": "a84b350756f85cdc1e076001b9c7e1b35e007f53fcf510b7c20ab38617e12202",
+      "match": false
+    }
+  },
+  "protocol_source_freeze_audit": "DEVIATION: train/eval source changed after initial protocol; hashes retained, no strict frozen-source claim"
+}
