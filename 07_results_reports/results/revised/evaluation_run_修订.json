@@ -1,0 +1,34 @@
+{
+  "checkpoint_sha256": {
+    "tst": "fd668bce77a2ed214254334816c357d554eb79bf15a1a42d7ab44c255ca922f0",
+    "fsnet": "1c969756566c3aeb06ddcdd759d2d20edb15e31aa37f4337749d7f75abf10b84",
+    "sdae": "d6591dde701a020c0f355edb5fe2467ffebb3b46db864299493daef468b3c03b"
+  },
+  "source_sha256": {
+    "train": "4514bb0d31c2311ac40c0d568ca1644c6bb03b8884b44ed25c2d3c7cf0ddd865",
+    "models": "e0453779493232f480efb39060b004c48b82f6020572409560454b169706cb5b",
+    "eval": "a84b350756f85cdc1e076001b9c7e1b35e007f53fcf510b7c20ab38617e12202"
+  },
+  "protocol_sha256": "2adc6807cc04dc1530fb9c2d395b783ef44860789a8dbf136585ad36b0f7c579",
+  "paired_source_sha256": {
+    "mask_10.npz": "49613fd5385021f9b311f9c301dc116a0e1f2d93f4f8054cbfc60ef5d436b982",
+    "mask_20.npz": "3095363f705fc5ac04ceba96ff073e2e120d9b1ab55de4c795b1127d2b2d9952",
+    "mask_30.npz": "ea31b3a180d1abe4b770d870d5a2f578defaa6669b9c56d4b6056ed972bcbfb4",
+    "bert_imputed_10.npz": "1d5d2eeaa3d2c624bb3683a6bb0d21f8503d65e2e16c884c4a7e310f1ae5bc5e",
+    "bert_imputed_20.npz": "ce9869065c906626d5f9d75e2c1763391cb2db231e5432952d5924e1cf143441",
+    "bert_imputed_30.npz": "60d7ad065bc618e5b0c5f5e9b967d065beafbb0276f6d77a72f9cc3fb4222232",
+    "deberta_imputed_10.npz": "298fe571ede137bee37c77b60861d0198db1a5953f7d012bf25aa6055ae0cbc2",
+    "deberta_imputed_20.npz": "1bebb67bad3a28d31dad16f3802fe10b5bc6c94cc1484c9940a7a0f50dc5cea1",
+    "deberta_imputed_30.npz": "8bbe29c397c4243c58654215999ca6dbb8a9c6aaa2c15142d81c7c7d48b2b4e2",
+    "roberta_imputed_10.npz": "131b60ad5b49b6a5c56f17626eefb38faba70d8309e6c404094a8ad206f77c96",
+    "roberta_imputed_20.npz": "897fdf5131961c3299b9be3a9885e5892bed1b0910c515c228a57e289ae2a515",
+    "roberta_imputed_30.npz": "3f9b07d7eaa3a6f5c239e57a70621ca2bbe6600f6c18ca873287069c6b4d9c79",
+    "tfi_imputed_10.npz": "82c82caa0b40246bc2f19010b854f7b1b1391c9a0c2288b1b01d972610394d3c",
+    "tfi_imputed_20.npz": "ae73c6f58431e0ba54c7ab1c4c8b45cae3532a17bddf7a430cda66fe13a56fd9",
+    "tfi_imputed_30.npz": "513c93adb2a23d3449618c4ebaaf42ab08eb7a2e7aa29620f15c6ed3549ad871"
+  },
+  "row_order": "server test order, np.argsort(lengths) fixed at evaluation time",
+  "uses_test_for_selection": false,
+  "fits": 0,
+  "mlm_retrained": false
+}

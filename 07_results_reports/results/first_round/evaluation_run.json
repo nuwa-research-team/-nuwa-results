@@ -1,0 +1,31 @@
+{
+  "data_sha256": "312617767197cad4c931dbc57f8fdaead8185c13e6e9e10b07458ce3ffabb3d6",
+  "code_sha256": "d60500f1b54c3a93579b71347708675bc0180b0667399055b4201504a9c772eb",
+  "classifier_code_sha256": "aeea9b68bbcf7b398f8ebbc4de392ff2159f0a8974d95009d2196bbe5db98fcc",
+  "checkpoint_sha256": {
+    "cnn": "cd353ccec17dcc467a90233815e5cf88bc8e74fdd90142fe2becb377bcaab9f3",
+    "gru": "8c07dcc283ce4ca9ddb0b7941f5a6578e09f78b9488baf12b352b819bd11ec0e",
+    "lstm": "ce2fe84c5f6deb4b262d08dca2a4cd6fff8049dedb7c0fb01814fb0f91a2987b",
+    "tst": "f3f879f83d06c7c18be3a64a7498c3200de93b5e67ff163c02b68594bbb34577",
+    "sdae": "058a06a95f275a5a8d4c7442e936830484b150c4ea85a2763fc6175ab22c6b14",
+    "fsnet": "d83e9ea00c51898f65a61349be5496a8c14ca1edd586eca2854aa5ba19d6cacd"
+  },
+  "seed": 42,
+  "classifier_batch": 512,
+  "mask_rule": "default_rng(seed + original_global_row), choice without replacement",
+  "metric_averages": [
+    "macro",
+    "weighted",
+    "micro"
+  ],
+  "uses_test_for_selection": false,
+  "strict_paper_reproduction": false,
+  "fits": 0,
+  "disclosures": [
+    "USTC8 class/data mismatch; raw signed IP length inputs",
+    "legacy classifier architectures retained; TST/FSNet/SDAE are approximations",
+    "uniform random mask only; not Poisson or real network replay",
+    "original DSH sequence order and batch size retained and IDs saved",
+    "GPU-trained standard MLM checkpoints fixed; extra CPU BERT not selected"
+  ]
+}

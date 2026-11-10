@@ -1,0 +1,11 @@
+{
+  "stage": "engineering_first_round",
+  "cells": 132,
+  "strict_paper_reproduction": false,
+  "files": {
+    "evaluation_run.json": "f1960a9d27f66b8fd242a4afeec217b59187cbc3bf36171e5c9e0b870299e758",
+    "independent_audit.json": "017ec243350d88e41344841d4b7ebf0891c4dcd19710838b547284173a3fbc84",
+    "metrics_132.json": "955ff8c06f5c10928d48cb5d52b9a86c356dd3f3ea771b247f7bc5ece7134a54",
+    "复现进度与原文对照_首轮.md": "fa0d3fa484e3c692c015f29a77b6bd06b9d17c96e93084df081e11198b99d5d0"
+  }
+}
