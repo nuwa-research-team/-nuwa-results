@@ -1,0 +1,178 @@
+[
+  {
+    "dataset": "USTC-TFC2016",
+    "path": "Benign/BitTorrent.pcap",
+    "bytes": 7686388,
+    "git_blob_sha1": "b1f315db3165d188e590d5646d55ace3cefd9369",
+    "url": "https://raw.githubusercontent.com/davidyslu/USTC-TFC2016/4bc9683b996f582c3843815b68da8e4dce9c7e1e/Benign/BitTorrent.pcap",
+    "source_commit": "4bc9683b996f582c3843815b68da8e4dce9c7e1e"
+  },
+  {
+    "dataset": "USTC-TFC2016",
+    "path": "Benign/FTP.pcap",
+    "bytes": 63166447,
+    "git_blob_sha1": "ea2249b5ff25cbcd722d1fa6e51b09d779df7e70",
+    "url": "https://raw.githubusercontent.com/davidyslu/USTC-TFC2016/4bc9683b996f582c3843815b68da8e4dce9c7e1e/Benign/FTP.pcap",
+    "source_commit": "4bc9683b996f582c3843815b68da8e4dce9c7e1e"
+  },
+  {
+    "dataset": "USTC-TFC2016",
+    "path": "Benign/Facetime.pcap",
+    "bytes": 2519073,
+    "git_blob_sha1": "0ee8a2853b7d74bf11f743da2bc09eb3a1a46e0b",
+    "url": "https://raw.githubusercontent.com/davidyslu/USTC-TFC2016/4bc9683b996f582c3843815b68da8e4dce9c7e1e/Benign/Facetime.pcap",
+    "source_commit": "4bc9683b996f582c3843815b68da8e4dce9c7e1e"
+  },
+  {
+    "dataset": "USTC-TFC2016",
+    "path": "Benign/Gmail.pcap",
+    "bytes": 9497320,
+    "git_blob_sha1": "0195517b4ffcab454ffc5c75efe846b2e0ba2e0d",
+    "url": "https://raw.githubusercontent.com/davidyslu/USTC-TFC2016/4bc9683b996f582c3843815b68da8e4dce9c7e1e/Benign/Gmail.pcap",
+    "source_commit": "4bc9683b996f582c3843815b68da8e4dce9c7e1e"
+  },
+  {
+    "dataset": "USTC-TFC2016",
+    "path": "Benign/MySQL.pcap",
+    "bytes": 23450490,
+    "git_blob_sha1": "2786f8944e0a2de21ba5b580c8bb3994beb6da24",
+    "url": "https://raw.githubusercontent.com/davidyslu/USTC-TFC2016/4bc9683b996f582c3843815b68da8e4dce9c7e1e/Benign/MySQL.pcap",
+    "source_commit": "4bc9683b996f582c3843815b68da8e4dce9c7e1e"
+  },
+  {
+    "dataset": "USTC-TFC2016",
+    "path": "Benign/Outlook.pcap",
+    "bytes": 11711492,
+    "git_blob_sha1": "55974ca9245ea5c036ae97e0f97996320b9160b3",
+    "url": "https://raw.githubusercontent.com/davidyslu/USTC-TFC2016/4bc9683b996f582c3843815b68da8e4dce9c7e1e/Benign/Outlook.pcap",
+    "source_commit": "4bc9683b996f582c3843815b68da8e4dce9c7e1e"
+  },
+  {
+    "dataset": "USTC-TFC2016",
+    "path": "Benign/SMB.7z",
+    "bytes": 28053413,
+    "git_blob_sha1": "0db46478a08432db8fef693fbe04b9d735209783",
+    "url": "https://raw.githubusercontent.com/davidyslu/USTC-TFC2016/4bc9683b996f582c3843815b68da8e4dce9c7e1e/Benign/SMB.7z",
+    "source_commit": "4bc9683b996f582c3843815b68da8e4dce9c7e1e"
+  },
+  {
+    "dataset": "USTC-TFC2016",
+    "path": "Benign/Skype.pcap",
+    "bytes": 4433982,
+    "git_blob_sha1": "b0aa82569ea6be06c810e0681d0a5537040a4f54",
+    "url": "https://raw.githubusercontent.com/davidyslu/USTC-TFC2016/4bc9683b996f582c3843815b68da8e4dce9c7e1e/Benign/Skype.pcap",
+    "source_commit": "4bc9683b996f582c3843815b68da8e4dce9c7e1e"
+  },
+  {
+    "dataset": "USTC-TFC2016",
+    "path": "Benign/Weibo.7z",
+    "bytes": 34394918,
+    "git_blob_sha1": "7aca87f7b998de71fed77194324a25dab789e4b8",
+    "url": "https://raw.githubusercontent.com/davidyslu/USTC-TFC2016/4bc9683b996f582c3843815b68da8e4dce9c7e1e/Benign/Weibo.7z",
+    "source_commit": "4bc9683b996f582c3843815b68da8e4dce9c7e1e"
+  },
+  {
+    "dataset": "USTC-TFC2016",
+    "path": "Benign/WorldOfWarcraft.pcap",
+    "bytes": 15631895,
+    "git_blob_sha1": "e74376c46c8e2738b7acdfa16bea96a795ad5086",
+    "url": "https://raw.githubusercontent.com/davidyslu/USTC-TFC2016/4bc9683b996f582c3843815b68da8e4dce9c7e1e/Benign/WorldOfWarcraft.pcap",
+    "source_commit": "4bc9683b996f582c3843815b68da8e4dce9c7e1e"
+  },
+  {
+    "dataset": "USTC-TFC2016",
+    "path": "LICENSE",
+    "bytes": 16725,
+    "git_blob_sha1": "a612ad9813b006ce81d1ee438dd784da99a54007",
+    "url": "https://raw.githubusercontent.com/davidyslu/USTC-TFC2016/4bc9683b996f582c3843815b68da8e4dce9c7e1e/LICENSE",
+    "source_commit": "4bc9683b996f582c3843815b68da8e4dce9c7e1e"
+  },
+  {
+    "dataset": "USTC-TFC2016",
+    "path": "Malware/Cridex.7z",
+    "bytes": 9463176,
+    "git_blob_sha1": "42e3dc22d13710765b361be4e9be857b896201b6",
+    "url": "https://raw.githubusercontent.com/davidyslu/USTC-TFC2016/4bc9683b996f582c3843815b68da8e4dce9c7e1e/Malware/Cridex.7z",
+    "source_commit": "4bc9683b996f582c3843815b68da8e4dce9c7e1e"
+  },
+  {
+    "dataset": "USTC-TFC2016",
+    "path": "Malware/Geodo.7z",
+    "bytes": 7254369,
+    "git_blob_sha1": "def47c79ad35a8112c6eb0fa2b4e02dea775ac3d",
+    "url": "https://raw.githubusercontent.com/davidyslu/USTC-TFC2016/4bc9683b996f582c3843815b68da8e4dce9c7e1e/Malware/Geodo.7z",
+    "source_commit": "4bc9683b996f582c3843815b68da8e4dce9c7e1e"
+  },
+  {
+    "dataset": "USTC-TFC2016",
+    "path": "Malware/Htbot.7z",
+    "bytes": 34207966,
+    "git_blob_sha1": "2e23ca51d07f9d166212589cce6f1fdc22563299",
+    "url": "https://raw.githubusercontent.com/davidyslu/USTC-TFC2016/4bc9683b996f582c3843815b68da8e4dce9c7e1e/Malware/Htbot.7z",
+    "source_commit": "4bc9683b996f582c3843815b68da8e4dce9c7e1e"
+  },
+  {
+    "dataset": "USTC-TFC2016",
+    "path": "Malware/Miuref.pcap",
+    "bytes": 17196739,
+    "git_blob_sha1": "070174d3486e74f04fccdc96504e6f4c60bf8333",
+    "url": "https://raw.githubusercontent.com/davidyslu/USTC-TFC2016/4bc9683b996f582c3843815b68da8e4dce9c7e1e/Malware/Miuref.pcap",
+    "source_commit": "4bc9683b996f582c3843815b68da8e4dce9c7e1e"
+  },
+  {
+    "dataset": "USTC-TFC2016",
+    "path": "Malware/Neris.7z",
+    "bytes": 27671368,
+    "git_blob_sha1": "b62d4ab875c6180711159c69d5047ba010bdc534",
+    "url": "https://raw.githubusercontent.com/davidyslu/USTC-TFC2016/4bc9683b996f582c3843815b68da8e4dce9c7e1e/Malware/Neris.7z",
+    "source_commit": "4bc9683b996f582c3843815b68da8e4dce9c7e1e"
+  },
+  {
+    "dataset": "USTC-TFC2016",
+    "path": "Malware/Nsis-ay.7z",
+    "bytes": 38271959,
+    "git_blob_sha1": "a48559182e827dbbc8c6a77aa612e32976c93d75",
+    "url": "https://raw.githubusercontent.com/davidyslu/USTC-TFC2016/4bc9683b996f582c3843815b68da8e4dce9c7e1e/Malware/Nsis-ay.7z",
+    "source_commit": "4bc9683b996f582c3843815b68da8e4dce9c7e1e"
+  },
+  {
+    "dataset": "USTC-TFC2016",
+    "path": "Malware/Shifu.7z",
+    "bytes": 4416510,
+    "git_blob_sha1": "10614ca107bc99f5130f8e9c4019e56e4ca15ea5",
+    "url": "https://raw.githubusercontent.com/davidyslu/USTC-TFC2016/4bc9683b996f582c3843815b68da8e4dce9c7e1e/Malware/Shifu.7z",
+    "source_commit": "4bc9683b996f582c3843815b68da8e4dce9c7e1e"
+  },
+  {
+    "dataset": "USTC-TFC2016",
+    "path": "Malware/Tinba.pcap",
+    "bytes": 2680243,
+    "git_blob_sha1": "ec394babe99ccaef6c0fcfd60ca6ae57c154b5e9",
+    "url": "https://raw.githubusercontent.com/davidyslu/USTC-TFC2016/4bc9683b996f582c3843815b68da8e4dce9c7e1e/Malware/Tinba.pcap",
+    "source_commit": "4bc9683b996f582c3843815b68da8e4dce9c7e1e"
+  },
+  {
+    "dataset": "USTC-TFC2016",
+    "path": "Malware/Virut.7z",
+    "bytes": 31320373,
+    "git_blob_sha1": "6b1e1ee1a54111ab00cf45fd65b073d6391ba3fe",
+    "url": "https://raw.githubusercontent.com/davidyslu/USTC-TFC2016/4bc9683b996f582c3843815b68da8e4dce9c7e1e/Malware/Virut.7z",
+    "source_commit": "4bc9683b996f582c3843815b68da8e4dce9c7e1e"
+  },
+  {
+    "dataset": "USTC-TFC2016",
+    "path": "Malware/Zeus.pcap",
+    "bytes": 14094482,
+    "git_blob_sha1": "80231c438781006535fff02e35fb518f41894bf5",
+    "url": "https://raw.githubusercontent.com/davidyslu/USTC-TFC2016/4bc9683b996f582c3843815b68da8e4dce9c7e1e/Malware/Zeus.pcap",
+    "source_commit": "4bc9683b996f582c3843815b68da8e4dce9c7e1e"
+  },
+  {
+    "dataset": "USTC-TFC2016",
+    "path": "README.md",
+    "bytes": 1052,
+    "git_blob_sha1": "8b6d41b3fe29a343d0c480b480a0ebf48f527240",
+    "url": "https://raw.githubusercontent.com/davidyslu/USTC-TFC2016/4bc9683b996f582c3843815b68da8e4dce9c7e1e/README.md",
+    "source_commit": "4bc9683b996f582c3843815b68da8e4dce9c7e1e"
+  }
+]

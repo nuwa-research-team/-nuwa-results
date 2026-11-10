@@ -1,0 +1,42 @@
+[
+  {
+    "label": "📄 Adware-PCAPs.md5 — Download",
+    "url": "https://cicresearch.ca/CICDataset/CICMalAnal2017/download.php?file=PCAPs%2FAdware-PCAPs.md5"
+  },
+  {
+    "label": "📄 Adware-PCAPs.zip — Download",
+    "url": "https://cicresearch.ca/CICDataset/CICMalAnal2017/download.php?file=PCAPs%2FAdware-PCAPs.zip"
+  },
+  {
+    "label": "📄 Benign-PCAPs.md5 — Download",
+    "url": "https://cicresearch.ca/CICDataset/CICMalAnal2017/download.php?file=PCAPs%2FBenign-PCAPs.md5"
+  },
+  {
+    "label": "📄 Benign-PCAPs.zip — Download",
+    "url": "https://cicresearch.ca/CICDataset/CICMalAnal2017/download.php?file=PCAPs%2FBenign-PCAPs.zip"
+  },
+  {
+    "label": "📄 Ransomware-PCAPs.md5 — Download",
+    "url": "https://cicresearch.ca/CICDataset/CICMalAnal2017/download.php?file=PCAPs%2FRansomware-PCAPs.md5"
+  },
+  {
+    "label": "📄 Ransomware-PCAPs.zip — Download",
+    "url": "https://cicresearch.ca/CICDataset/CICMalAnal2017/download.php?file=PCAPs%2FRansomware-PCAPs.zip"
+  },
+  {
+    "label": "📄 SMSmalware-PCAPs.md5 — Download",
+    "url": "https://cicresearch.ca/CICDataset/CICMalAnal2017/download.php?file=PCAPs%2FSMSmalware-PCAPs.md5"
+  },
+  {
+    "label": "📄 SMSmalware-PCAPs.zip — Download",
+    "url": "https://cicresearch.ca/CICDataset/CICMalAnal2017/download.php?file=PCAPs%2FSMSmalware-PCAPs.zip"
+  },
+  {
+    "label": "📄 Scareware-PCAPs.md5 — Download",
+    "url": "https://cicresearch.ca/CICDataset/CICMalAnal2017/download.php?file=PCAPs%2FScareware-PCAPs.md5"
+  },
+  {
+    "label": "📄 Scareware-PCAPs.zip — Download",
+    "url": "https://cicresearch.ca/CICDataset/CICMalAnal2017/download.php?file=PCAPs%2FScareware-PCAPs.zip"
+  }
+]

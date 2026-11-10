@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Nuwa",
+    "commit": "2d4d5bf3bfdf1f7c3b9a8bd310ace5baa49bcf65"
+  },
+  {
+    "name": "FS-Net",
+    "commit": "526bb76b72a095e5ed88c59983a7bc6a174a4ec3"
+  },
+  {
+    "name": "mvts_transformer",
+    "commit": "823935f1657d04503cd412e1f30d58a20f37e0f5"
+  }
+]

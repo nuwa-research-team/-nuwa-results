@@ -1,0 +1,38 @@
+{
+  "dataset": "USTC eight-class engineering adaptation",
+  "total": 66477,
+  "roles": {
+    "train": 47862,
+    "val": 5319,
+    "test": 13296
+  },
+  "labels": [
+    "Htbot",
+    "Miuref",
+    "Neris",
+    "Nsis-ay",
+    "SMB",
+    "Virut",
+    "Weibo",
+    "Zeus"
+  ],
+  "class_counts": {
+    "Htbot": 1268,
+    "Miuref": 634,
+    "Neris": 848,
+    "Nsis-ay": 155,
+    "SMB": 26428,
+    "Virut": 1761,
+    "Weibo": 35279,
+    "Zeus": 104
+  },
+  "sha256": "312617767197cad4c931dbc57f8fdaead8185c13e6e9e10b07458ce3ffabb3d6",
+  "strict_paper_reproduction": false,
+  "scope": "d4 only; no d1/d2/d3 training in the displayed results",
+  "paper_d4_reference": {
+    "classes": 6,
+    "sessions": 138901
+  },
+  "input": "signed IP packet lengths clipped to +/-1600, minimum 20 packets",
+  "large_original_pcaps": "retained in the existing local dataset archive; download / hash manifests are included"
+}
