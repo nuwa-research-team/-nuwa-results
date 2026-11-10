@@ -1,0 +1,64 @@
+{
+  "protocol": "one-shot bounded revision of TST / FS-Net / SDAE",
+  "scope": "only the two authorised experiments; no extra experiments",
+  "seed": 42,
+  "data": {
+    "root": "/data1/lhy/nuwa/work/d4_aligned/raw.pkl",
+    "sha256": "312617767197cad4c931dbc57f8fdaead8185c13e6e9e10b07458ce3ffabb3d6",
+    "roles": "same train/val/test as engineering table; test never used for selection"
+  },
+  "common": {
+    "supervised_epochs_max": 15,
+    "patience": 4,
+    "selection": "val accuracy",
+    "batch": 256,
+    "lr": 0.001,
+    "input_scale": 0.000625,
+    "grad_clip": 5.0,
+    "optimizer": "Adam"
+  },
+  "models": {
+    "tst": {
+      "implementation": "pinned gzerveas/mvts_transformer TSTransformerEncoderClassiregressor",
+      "adapter": "PyTorch>=2 is_causal signature only; no architecture change",
+      "d_model": 64,
+      "heads": 8,
+      "layers": 3,
+      "dim_feedforward": 256,
+      "dropout": 0.1,
+      "pos_encoding": "fixed",
+      "activation": "gelu",
+      "norm": "BatchNorm"
+    },
+    "fsnet": {
+      "implementation": "WSPTTH/FS-Net topology (encoder/decoder MultiBiGRU + reconstruction)",
+      "hidden": 128,
+      "layers": 2,
+      "vocab": 3202,
+      "reconstruction_weight": 0.5,
+      "loss": "CE + 0.5 * CE(reconstruct, ids)"
+    },
+    "sdae": {
+      "implementation": "greedy layer-wise denoising auto-encoder",
+      "stage1": "Linear(512->256)+ReLU, decoder 256->512, mask noise 0.15, MSE, <=5 epochs",
+      "stage2": "Linear(256->128)+ReLU, decoder 128->256 on frozen layer1, noise 0.15, MSE, <=5 epochs",
+      "stage3": "head Linear(128->classes), CE, <=15 epochs, patience 4"
+    }
+  },
+  "artifacts": {
+    "dir": "/data1/lhy/nuwa/repaired",
+    "eval_dir": "/data1/lhy/nuwa/work/repaired_eval_20261110",
+    "old_artifacts_preserved": true,
+    "no_overwrite": true
+  },
+  "declaration": "declared migration / mechanism reproduction; original hyper-parameters unknown; not bit-level original",
+  "hashes": {
+    "train_repaired": "987e635abd952c5e40a5f5cb980b4f6c8217746982277a6a248cbe28cc861d45",
+    "models_repaired": "e0453779493232f480efb39060b004c48b82f6020572409560454b169706cb5b",
+    "eval_repaired": "8f2620a24c5f7dd3df974295f5d3825b47597952f2089599545fd91ef367b41a",
+    "tst_upstream": "de8104d9c37b3a2999ae88caf09ff482346def8967686ec0f78a6665d7f6ac10",
+    "tst_upstream_commit": "823935f1657d04503cd412e1f30d58a20f37e0f5",
+    "fsnet_upstream_commit": "526bb76b72a095e5ed88c59983a7bc6a174a4ec3"
+  },
+  "note": "models_repaired.py re-hashed after TST fixed-length padding fix (declared deviation: pinned TST needs seq_len inputs)"
+}
