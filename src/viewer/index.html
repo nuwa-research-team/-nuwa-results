@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="通用实验三线表：导入 JSON / CSV，查看数据、比较指标并记录核对备注。">
+<title>DNS2027 · 实验结果</title>
+<style>/*__STYLE__*/</style>
+</head>
+<body>
+<header class="apphead"><div><a href="#" id="home" class="eyebrow">DNS2027 <span>实验结果</span></a><h1 id="project-title">一份页面，每一组实验。</h1><p id="project-description">导入数据，生成三线表。表格、指标与来源，随你的实验而变。</p><p id="project-meta" class="meta"></p></div><div class="actions"><button class="btn primary" id="import-data">导入数据</button><button class="btn" id="load-url">从链接载入</button><button class="btn" id="help">使用说明</button></div></header>
+<div id="message" class="message" role="status" hidden></div>
+<main>
+<section id="welcome" class="welcome">
+  <div class="intro"><div class="eyebrow">DATA IN. TABLES OUT.</div><h2>让数据换，<br>让页面留下。</h2><p>标题、表头、精度、单位和比较分组都由数据定义。适用于性能对比、消融、泛化、效率和你接下来的实验。</p><div class="actions"><button class="btn primary" id="welcome-import">选择 JSON / CSV</button><button class="btn" id="sample">查看示例 →</button></div><p class="small">也可以将文件拖到页面。所选文件在浏览器中读取。</p></div>
+  <div class="sample-paper" aria-label="三线表示意，非真实实验数据"><span class="paper-label">TABLE / EXAMPLE</span><h3>同一套格式，不同的研究</h3><table><thead><tr><th>Method</th><th>Score ↑</th><th>Cost ↓</th></tr></thead><tbody><tr><td>Baseline</td><td>0.8720</td><td>24.10</td></tr><tr><td>Proposed</td><td><mark>0.9140</mark></td><td><mark>18.60</mark></td></tr></tbody></table><p>保留原始精度 · 明确比较方向 · 追溯每一行</p></div>
+</section>
+<section id="workspace" hidden>
+  <div class="workspace-bar"><div class="search"><label id="group-label" hidden>查看内容<select id="table-group"></select></label><p id="group-description" class="small" hidden></p><nav id="navigation" aria-label="表格导航"></nav></div><div class="actions"><button class="btn small" id="export-data">导出数据 JSON</button><button class="btn small" id="export-html">导出当前 HTML</button><button class="btn small" id="metadata">数据说明</button></div></div>
+  <div class="toolbar"><label class="search">搜索当前表<input id="query" type="search" placeholder="搜索数值、方法、来源或详情"></label><label>核对状态<select id="status-filter"><option value="all">全部记录</option><option value="pending">未核对</option><option value="checked">已核对</option><option value="question">有疑问</option></select></label><label>每页<select id="page-size"><option>25</option><option selected>50</option><option>100</option></select></label><label class="check-label"><input id="audit" type="checkbox">显示核对列</label></div>
+  <div class="table-heading"><p id="table-caption" class="paper-label"></p><h2 id="table-title"></h2><p id="table-description"></p></div>
+  <p class="legend" id="legend"></p><div class="table-wrap" id="table-container"></div><p id="table-notes" class="table-notes"></p>
+  <div class="pager"><span id="page-info"></span><div class="actions"><button class="btn small" id="prev">上一页</button><button class="btn small" id="next">下一页</button></div></div>
+  <footer><span id="review-info"></span><div class="actions"><button class="btn small" id="export-notes">导出核对单</button><button class="btn small" id="import-notes">导入核对单</button><button class="btn small" id="print">打印当前表全部行</button></div></footer>
+</section>
+</main>
+<dialog id="details-dialog"><div class="dialog-head"><div><span class="eyebrow">SOURCE & REVIEW</span><h2 id="detail-title">原始记录</h2></div><button class="btn" data-close="details-dialog">关闭</button></div><div class="dialog-body detail-grid"><div><h3>原始数值与详情</h3><pre id="detail-values"></pre><details><summary>完整来源</summary><pre id="detail-source"></pre></details></div><form id="review-form"><h3>人工核对</h3><p class="small">备注与数据快照绑定，保存到此浏览器。导出核对单可备份或迁移。</p><label>状态<select id="review-status"><option value="pending">未核对</option><option value="checked">已核对</option><option value="question">有疑问</option></select></label><label>备注 / 修正依据<textarea id="review-text" rows="7"></textarea></label><button class="btn primary" type="submit">保存核对记录</button><p id="save-state" role="status" class="small"></p></form></div></dialog>
+<dialog id="url-dialog"><form id="url-form"><div class="dialog-head"><h2>从链接载入 JSON</h2><button class="btn" type="button" data-close="url-dialog">关闭</button></div><div class="dialog-body"><label>数据文件地址<input id="data-url" placeholder="https://example.com/reports/experiment.json" required></label><p class="small">支持 HTTP / HTTPS JSON。跨站链接需允许 CORS；本地文件请使用“导入数据”。</p><p class="dialog-error" role="alert"></p><button class="btn primary">载入</button></div></form></dialog>
+<dialog id="csv-dialog"><form id="csv-form"><div class="dialog-head"><div><span class="eyebrow">IMPORT / CSV</span><h2>定义这张表</h2></div><button type="button" class="btn" data-close="csv-dialog">取消</button></div><div class="dialog-body"><div class="form-grid"><label>项目 ID<input id="csv-project" required value="my-experiment"></label><label>表格标题<input id="csv-title" required></label><label>分隔符<select id="csv-delimiter"><option value=",">逗号 ,</option><option value=";">分号 ;</option><option value="tab">制表符 Tab</option></select></label><label>行 ID<select id="csv-id"></select></label></div><p class="small">第一行为表头；默认按文本读取。请显式选择数值列、最优方向和比较分组。空单元格记为缺失值；不做数据补全。数值支持十进制与科学计数法。</p><div class="table-wrap" id="csv-columns"></div><p id="csv-preview" class="small"></p><p class="dialog-error" role="alert"></p><button class="btn primary" id="csv-submit">导入并渲染</button></div></form></dialog>
+<dialog id="info-dialog"><div class="dialog-head"><h2 id="info-title"></h2><button class="btn" data-close="info-dialog">关闭</button></div><div class="dialog-body" id="info-body"></div></dialog>
+<dialog id="merge-dialog"><form method="dialog"><div class="dialog-head"><h2>核对记录有冲突</h2></div><div class="dialog-body"><p id="merge-info"></p><div class="actions"><button class="btn" value="cancel">取消</button><button class="btn" value="keep">保留当前冲突项</button><button class="btn primary" value="replace">采用导入冲突项</button></div></div></form></dialog>
+<input id="data-file" type="file" accept=".json,.csv,.tsv,application/json,text/csv" hidden><input id="notes-file" type="file" accept=".json,application/json" hidden>
+<script type="application/json" id="sample-data">/*__SAMPLE__*/</script>
+<script type="application/json" id="embedded-data">null</script>
+<script>/*__CORE__*/</script>
+<script>/*__LEGACY__*/</script>
+<script>/*__NAVIGATION__*/</script>
+<script>/*__APP__*/</script>
+</body>
+</html>

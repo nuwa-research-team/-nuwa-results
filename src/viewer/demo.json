@@ -1,0 +1,48 @@
+{
+  "format": "experiment-review",
+  "version": 1,
+  "project": {
+    "id": "example-study",
+    "title": "实验示例 · 模型性能与部署成本",
+    "description": "演示数据，用于展示通用格式；不代表真实实验。修改这份 JSON，即可创建自己的实验报告。"
+  },
+  "tables": [
+    {
+      "id": "performance",
+      "title": "检测性能",
+      "caption": "Table I · Detection Performance",
+      "notes": "指标在同一数据集内比较。表中显示四位小数；完整原值可在行详情中查看。",
+      "compareBy": ["dataset"],
+      "columns": [
+        {"key": "method", "label": "Method", "type": "text"},
+        {"key": "dataset", "label": "Dataset", "type": "text"},
+        {"key": "f1", "label": "F1", "type": "number", "decimals": 4, "direction": "max"},
+        {"key": "auc", "label": "AUROC", "type": "number", "decimals": 4, "direction": "max"},
+        {"key": "fpr", "label": "FPR", "type": "number", "decimals": 4, "direction": "min"}
+      ],
+      "rows": [
+        {"id": "a-baseline", "values": {"method": "Baseline", "dataset": "Dataset A", "f1": 0.872014, "auc": 0.9542, "fpr": 0.042}, "source": "demo", "details": {"seed": 42}},
+        {"id": "a-proposed", "values": {"method": "Proposed", "dataset": "Dataset A", "f1": 0.914028, "auc": 0.9761, "fpr": 0.026}, "source": "demo", "details": {"seed": 42}},
+        {"id": "a-variant", "values": {"method": "Variant", "dataset": "Dataset A", "f1": 0.9034, "auc": 0.9761, "fpr": 0.031}, "source": "demo"},
+        {"id": "b-baseline", "values": {"method": "Baseline", "dataset": "Dataset B", "f1": 0.8032, "auc": 0.9124, "fpr": 0.068}, "source": "demo"},
+        {"id": "b-proposed", "values": {"method": "Proposed", "dataset": "Dataset B", "f1": 0.8627, "auc": 0.9456, "fpr": 0.047}, "source": "demo"}
+      ]
+    },
+    {
+      "id": "efficiency",
+      "title": "部署成本",
+      "caption": "Table II · Deployment Cost",
+      "notes": "示例采用相同测量条件。Parameters 存储单位为 M，显示时 × 1,000 转为 K；原始值保持不变。",
+      "columns": [
+        {"key": "method", "label": "Method", "type": "text"},
+        {"key": "parameters", "label": "Parameters", "type": "number", "decimals": 3, "scale": 1000, "unit": "K", "direction": "min"},
+        {"key": "latency", "label": "Latency", "type": "number", "decimals": 2, "unit": "ms", "direction": "min"}
+      ],
+      "rows": [
+        {"id": "baseline", "values": {"method": "Baseline", "parameters": 1.24, "latency": 24.1}},
+        {"id": "proposed", "values": {"method": "Proposed", "parameters": 0.78, "latency": 18.6}}
+      ]
+    }
+  ],
+  "sources": {"demo": {"label": "演示数据", "paths": ["examples/demo.json"], "description": "这些数字仅用于说明数据格式。"}}
+}

@@ -1,5 +1,5 @@
 {
-  "format": "nuwa-viewer-validation-v2",
+  "format": "nuwa-viewer-validation-v3",
   "original_snapshot_validation": {
     "template_schema_validation": "PASS (ReviewCore.validate)",
     "source_metric_equality_checks": 1380,
@@ -17,7 +17,9 @@
     "no_new_training": true,
     "strict_paper_reproduction": false
   },
-  "presentation_validation": {
+  "no_new_training": true,
+  "strict_paper_reproduction": false,
+  "previous_presentation_validation": {
     "javascript_syntax": "PASS",
     "original_rows_unchanged": 487,
     "original_column_definitions_unchanged": true,
@@ -43,6 +45,23 @@
       "captured_console_errors": 0
     }
   },
-  "no_new_training": true,
-  "strict_paper_reproduction": false
+  "template_validation": {
+    "template": "Experiment-Viewer-2026-10-21.zip",
+    "template_sha256": "8a2bea25afd6bc20ac4cbc193c4b052b530de3858d779c330c84d0cd1ec2c3a8",
+    "brand": "DNS2027",
+    "template_stylesheet_unchanged": true,
+    "template_core_and_legacy_importer_unchanged": true,
+    "original_rows_unchanged": 487,
+    "paper_values_checked": 1392,
+    "paper_table_count": 20,
+    "dataset_group_isolation": "PASS",
+    "invalid_groups_rejected": "PASS",
+    "ungrouped_template_import_supported": "PASS",
+    "template_schema_validation": "PASS",
+    "javascript_syntax": "PASS",
+    "skill_import_matches_local_build": "PASS",
+    "data_fingerprint": "bbe0fdf87c17d8351c328726a9582759fff0ef41866a82d3c62d2b5307a5b28b",
+    "tables": 30,
+    "rows": 1183
+  }
 }

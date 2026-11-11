@@ -1,12 +1,12 @@
 {
-  "tables": 10,
-  "rows": 487,
+  "tables": 30,
+  "rows": 1183,
   "english_filenames": true,
   "source_metric_files_unchanged": true,
   "files": {
-    "README.md": "85d1d30d502f1d47f9445081ce030907acc7d134c4864b50efb475eba49e13c0",
-    "experiment_data.json": "b46b9bcf951f775e1f94ad1fe54eacdf9553517d5cc78b4393f691f95a11ed15",
-    "index.html": "9e1bed7622a0f02174206d2db9a128a04b5183ff59a326b6da3ee70a018c8018",
+    "README.md": "72dad6e12561c4230ad5f76774987ee3b63f1ed5a6fabaf4d21c79b6843852e6",
+    "experiment_data.json": "6c37269c6da7d3fc953c274a57456edc85a9eca5d4887748f5ce63a7f2101c34",
+    "index.html": "ce614cbccd35d5c5e313d884bc0f269f403d95e1ee0a023cc9a72c5a4d32ccb6",
     "paper_reference_extraction.csv": "e59a89542925e142d1d25a42e2d1e01cd7f2fb5b5fe38cb60ca8259d51ee18a8",
     "source_data/README.md": "c3f2eff008cba411f65a5bb94acb7031cd9a32f904c95581ec4a9f4f9dc2a9b8",
     "source_data/first_round_132.json": "955ff8c06f5c10928d48cb5d52b9a86c356dd3f3ea771b247f7bc5ece7134a54",
@@ -14,6 +14,6 @@
     "source_data/revised_66.json": "cd94cdfd10d77ca3d646ef7b1cb4805f41f556fa8aa59f66fc4b2d5da52e1120",
     "source_data/revised_audit.json": "3f7866fccadea83f34356024a3e36bc3793a93d485480d65aedeccce5947a6af",
     "source_data/revision_protocol.json": "2adc6807cc04dc1530fb9c2d395b783ef44860789a8dbf136585ad36b0f7c579",
-    "validation.json": "4309775072f2b660704b9ca7776105dfcd02866f4847edd533aaff13cabbfff6"
+    "validation.json": "5157b178c869e507a4fa67b99f51a68eeb39f5fa7e62c5d61737b286e72f6516"
   }
 }
