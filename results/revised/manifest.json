@@ -1,0 +1,14 @@
+{
+  "strict_paper_reproduction": false,
+  "first_round_cells": 132,
+  "repaired_extra_cells": 66,
+  "merged_cells": 132,
+  "files": {
+    "README.md": "40cedbd254f3d175cd3873251130ef02cedb68ac1b22b6f26f3428adbf551989",
+    "evaluation_run_修订.json": "8e609f07375dc8c7c0fe06d8a5ad1fb6abf644329c9304f42b5e98bf7406c4c8",
+    "independent_audit_修订66.json": "3f7866fccadea83f34356024a3e36bc3793a93d485480d65aedeccce5947a6af",
+    "metrics_修订66.json": "cd94cdfd10d77ca3d646ef7b1cb4805f41f556fa8aa59f66fc4b2d5da52e1120",
+    "metrics_合并132.json": "f5d822c7c340653d76a55314f31f64589c42571b2187d795dda7316e35aa33e8",
+    "protocol_修订.json": "2adc6807cc04dc1530fb9c2d395b783ef44860789a8dbf136585ad36b0f7c579"
+  }
+}

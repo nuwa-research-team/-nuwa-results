@@ -1,0 +1,20 @@
+{
+  "tables": 10,
+  "rows": 487,
+  "english_filenames": true,
+  "source_metric_files_unchanged": true,
+  "files": {
+    "README.md": "f62b7934a426264643eec255f2e2bde6059e5ef36ce00519d0f65f9796e85606",
+    "experiment_data.json": "5b668274e6baaf6401bfd604643aaea82c02ba5bcf41ddf9f90aff297290bb33",
+    "index.html": "59f9cfc998ed8501228f9042bfa4ee54c197558506f6b2040607a02fc9a8551b",
+    "paper_reference_extraction.csv": "e59a89542925e142d1d25a42e2d1e01cd7f2fb5b5fe38cb60ca8259d51ee18a8",
+    "preview.png": "d5e64f7bcb213ab82e0c23053c07f1c8ad0e7f0b95a8cacef944f73c95506d21",
+    "source_data/README.md": "c3f2eff008cba411f65a5bb94acb7031cd9a32f904c95581ec4a9f4f9dc2a9b8",
+    "source_data/first_round_132.json": "955ff8c06f5c10928d48cb5d52b9a86c356dd3f3ea771b247f7bc5ece7134a54",
+    "source_data/first_round_audit.json": "017ec243350d88e41344841d4b7ebf0891c4dcd19710838b547284173a3fbc84",
+    "source_data/revised_66.json": "cd94cdfd10d77ca3d646ef7b1cb4805f41f556fa8aa59f66fc4b2d5da52e1120",
+    "source_data/revised_audit.json": "3f7866fccadea83f34356024a3e36bc3793a93d485480d65aedeccce5947a6af",
+    "source_data/revision_protocol.json": "2adc6807cc04dc1530fb9c2d395b783ef44860789a8dbf136585ad36b0f7c579",
+    "validation.json": "c49b8f611a81f4f94993d3c41cfb9c717d06b79d2d2a0ea8f107ef9bdcb8eccb"
+  }
+}
