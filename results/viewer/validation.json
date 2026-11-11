@@ -28,7 +28,19 @@
     "d1_d2_d3_have_no_local_measurement_table": "PASS",
     "html_embedded_data_equals_json": "PASS",
     "browser_checks": {
-      "status": "pending"
+      "status": "PASS",
+      "url": "https://nuwa-research-team.github.io/-nuwa-results/results/viewer/index.html",
+      "implementation_commit": "cf3efa11a9360d424bfa9012f3f231fce142c4ec",
+      "browser": "Chrome desktop",
+      "default_d4_dataset_scope_and_six_classifier_rows": "PASS",
+      "d1_d2_d3_empty_measurement_states": "PASS",
+      "d1_d2_d3_dataset_specific_paper_references": "PASS",
+      "d4_accuracy_and_30_percent_loss_selection": "PASS",
+      "raw_measurement_detail_dialog": "PASS",
+      "d4_supplementary_table_xxxiv_selection": "PASS",
+      "history_records_displayed": 198,
+      "audit_records_displayed": 9,
+      "captured_console_errors": 0
     }
   },
   "no_new_training": true,
