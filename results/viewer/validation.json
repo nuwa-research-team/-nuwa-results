@@ -1,17 +1,36 @@
 {
-  "template_schema_validation": "PASS (ReviewCore.validate)",
-  "source_metric_equality_checks": 1380,
-  "source_metric_equality": "PASS",
-  "html_embedded_data_equals_json": "PASS",
-  "browser_checks": [
-    "default robustness table",
-    "SOTA30% table",
-    "row detail and prediction hash",
-    "paper83.47/83.08 reference",
-    "audit deviation visible"
-  ],
-  "tables": 10,
-  "rows": 487,
+  "format": "nuwa-viewer-validation-v2",
+  "original_snapshot_validation": {
+    "template_schema_validation": "PASS (ReviewCore.validate)",
+    "source_metric_equality_checks": 1380,
+    "source_metric_equality": "PASS",
+    "html_embedded_data_equals_json": "PASS",
+    "browser_checks": [
+      "default robustness table",
+      "SOTA30% table",
+      "row detail and prediction hash",
+      "paper83.47/83.08 reference",
+      "audit deviation visible"
+    ],
+    "tables": 10,
+    "rows": 487,
+    "no_new_training": true,
+    "strict_paper_reproduction": false
+  },
+  "presentation_validation": {
+    "javascript_syntax": "PASS",
+    "original_rows_unchanged": 487,
+    "original_column_definitions_unchanged": true,
+    "measurement_cells_compared_to_merged_source": 336,
+    "measurement_equality": "PASS",
+    "paper_metric_records_preserved": 1392,
+    "paper_dataset_and_table_isolation": "PASS",
+    "d1_d2_d3_have_no_local_measurement_table": "PASS",
+    "html_embedded_data_equals_json": "PASS",
+    "browser_checks": {
+      "status": "pending"
+    }
+  },
   "no_new_training": true,
   "strict_paper_reproduction": false
 }
