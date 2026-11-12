@@ -1,0 +1,245 @@
+{
+  "source": "User PDF sections 8-11 and 25; N=8 is a demonstration only",
+  "not_a_training_dataset": true,
+  "N": 8,
+  "redacted_records": [
+    {
+      "slot": 0,
+      "signed_len": 60,
+      "time_us": 0
+    },
+    {
+      "slot": 1,
+      "signed_len": -60,
+      "time_us": 1000
+    },
+    {
+      "slot": 4,
+      "signed_len": -1500,
+      "time_us": 1800
+    },
+    {
+      "slot": 5,
+      "signed_len": 83,
+      "time_us": 2300
+    },
+    {
+      "slot": 7,
+      "signed_len": -52,
+      "time_us": 3500
+    }
+  ],
+  "observation_mask": [
+    1,
+    1,
+    0,
+    0,
+    1,
+    1,
+    0,
+    1
+  ],
+  "valid_mask": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "queries": [
+    2,
+    3,
+    6
+  ],
+  "expected_numeric_input": [
+    [
+      0.039220713153281295,
+      1,
+      0.0,
+      0.0,
+      0.0,
+      1,
+      0,
+      0.0,
+      1,
+      0.125
+    ],
+    [
+      0.039220713153281295,
+      -1,
+      0.6931471805599453,
+      0.6931471805599453,
+      0.14285714285714285,
+      1,
+      1,
+      0.125,
+      1,
+      0.375
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.2857142857142857,
+      0,
+      1,
+      0.125,
+      1,
+      0.25
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.42857142857142855,
+      0,
+      1,
+      0.25,
+      1,
+      0.125
+    ],
+    [
+      0.6931471805599453,
+      -1,
+      1.0296194171811581,
+      0.5877866649021191,
+      0.5714285714285714,
+      1,
+      1,
+      0.375,
+      1,
+      0.125
+    ],
+    [
+      0.05385667279071071,
+      1,
+      1.1939224684724346,
+      0.4054651081081644,
+      0.7142857142857143,
+      1,
+      1,
+      0.125,
+      1,
+      0.25
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.8571428571428571,
+      0,
+      1,
+      0.125,
+      1,
+      0.125
+    ],
+    [
+      0.034079313652862625,
+      -1,
+      1.5040773967762742,
+      0.7884573603642702,
+      1.0,
+      1,
+      1,
+      0.25,
+      0,
+      0.0
+    ]
+  ],
+  "expected_visible_gaps_excluding_first_anchor_us": [
+    1000,
+    800,
+    500,
+    1200
+  ],
+  "expected_global_stats": [
+    0.625,
+    0.4,
+    0.6,
+    0.17190491866201624,
+    0.2607048055256631,
+    -0.837037037037037,
+    1.5040773967762742,
+    0.6187140784836247,
+    0.14211324419749877,
+    0.0,
+    0.5,
+    0.5,
+    0.0,
+    0.2857142857142857,
+    0.25,
+    0.25
+  ],
+  "expected_global_stat_valid": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "expected_true_adjacent_visible_pairs": [
+    [
+      0,
+      1
+    ],
+    [
+      4,
+      5
+    ]
+  ],
+  "target_only": [
+    52,
+    -1500,
+    52
+  ],
+  "expected_shape_at_N256": {
+    "numeric": [
+      256,
+      10
+    ],
+    "packet_hidden": [
+      256,
+      256
+    ],
+    "behavior_stats": [
+      21,
+      16
+    ],
+    "behavior_input": [
+      21,
+      290
+    ],
+    "behavior_hidden": [
+      21,
+      256
+    ],
+    "packet_projected": [
+      256,
+      2560
+    ],
+    "behavior_projected": [
+      21,
+      2560
+    ]
+  },
+  "mandatory_counterfactual": "Changing hidden length/direction/internal timestamps must leave every input and prefix bitwise unchanged; only target may change.",
+  "mandatory_empty_unit": "Zero visible-packet hp aggregate; no NaN; undefined directional/length/time/transition stats carry validity=0.",
+  "mandatory_padding": "No target in padding, valid=0 rows all-zero numeric, missing valid=1 soft tokens retain attention=1."
+}
