@@ -1,0 +1,1 @@
+{"class_prediction_mismatches":{"P0":{"cnn":0,"fsnet":0,"gru":0,"lstm":0,"sdae":0,"tst":0},"TFI":{"cnn":0,"fsnet":0,"gru":0,"lstm":0,"sdae":0,"tst":0}},"passed":true,"purpose":"Verify archived 1000-flow predictions equal fresh inference on fixed 200-flow subset."}
