@@ -1,0 +1,24 @@
+{
+  "batches_equal_repository": true,
+  "files": 390,
+  "original_workspace_unchanged_by_packaging": true,
+  "passed": true,
+  "per_batch_max_bytes": 8388608,
+  "per_batch_max_files": 80,
+  "zip_crc_and_hashes_pass": true,
+  "offline_metric_verification": {
+    "passed": true,
+    "method_results": 24,
+    "scope": "Saved 200-flow Accuracy, macro-F1 and missing-slot magnitude MAE; no model/API rerun"
+  },
+  "python_syntax": {
+    "passed": true,
+    "files": 32,
+    "errors": []
+  },
+  "cohort_json_equal_original": {
+    "local_A.json": true,
+    "local_B.json": true
+  },
+  "api_record_count": 12129
+}

@@ -1,0 +1,14 @@
+最近实验已整理完成。请优先打开 repository/README.md 查看范围与结果。
+
+上传普通可浏览代码仓库：
+1. 在 GitHub 打开目标仓库，选择 Add file → Upload files。
+2. 打开 upload_batches/batch_01，把里面的内容拖进去；不要拖 batch_01 外层。
+3. 提交后按 batch_02、batch_03……依次重复，始终上传到同一仓库根目录。
+4. 每批最多80个文件、8MiB；真实大小见 UPLOAD_SIZES.csv。
+
+repository 是完整整理版；upload_batches 是分批上传副本；zip_packages 是压缩备份。
+三者是同一份内容，不要全部重复上传。ZIP上传后不会在GitHub自动展开成源码。
+可只上传各batch ZIP作资料归档，但别人将需下载解压才能查看代码。
+
+未上传到GitHub，也未修改/删除原始实验。权重、缓存、原始PCAP等大文件未复制；清单在 repository/09_documentation/excluded_files.json。
+候选选择方案尚未实现或运行，当前先完成归档。

@@ -1,0 +1,65 @@
+[
+  {
+    "batch": "batch_01",
+    "files": 80,
+    "uncompressed_bytes": 6689774,
+    "zip_bytes": 564333,
+    "zip_sha256": "d404f4693a41d22ee1863cceef026c00821b5a346981955c9eebdb0f5dae85ba"
+  },
+  {
+    "batch": "batch_02",
+    "files": 80,
+    "uncompressed_bytes": 5975305,
+    "zip_bytes": 326528,
+    "zip_sha256": "4f9f66158c65851c485f8b36d8204ae13132c53a9834bf49fc1342d175c1069f"
+  },
+  {
+    "batch": "batch_03",
+    "files": 80,
+    "uncompressed_bytes": 8165185,
+    "zip_bytes": 558135,
+    "zip_sha256": "38fd8dd3319576b27efd1f517988bc31ccccf65e4d570fce0d2a221d524ed20b"
+  },
+  {
+    "batch": "batch_04",
+    "files": 80,
+    "uncompressed_bytes": 1100165,
+    "zip_bytes": 161285,
+    "zip_sha256": "150f1d2232352cdfc6f1801cfd0f4d921c6bc1718e256ee53a0ae5df6e689593"
+  },
+  {
+    "batch": "batch_05",
+    "files": 51,
+    "uncompressed_bytes": 4640453,
+    "zip_bytes": 1143805,
+    "zip_sha256": "6f9ec75fc1c349c5de2d1b60d46650ff2f3b6e3712d837b58af60e9ee5895a2b"
+  },
+  {
+    "batch": "batch_06",
+    "files": 2,
+    "uncompressed_bytes": 8382502,
+    "zip_bytes": 2445527,
+    "zip_sha256": "96f1c123fa273f3f9cf1b1d1672c815ba45026f6a624dee502f4e1a819566e51"
+  },
+  {
+    "batch": "batch_07",
+    "files": 2,
+    "uncompressed_bytes": 4728184,
+    "zip_bytes": 2171179,
+    "zip_sha256": "5b3355619fd008643c49fce7e1d89f3b76cc650818e0abd083cad32e6a842ec0"
+  },
+  {
+    "batch": "batch_08",
+    "files": 4,
+    "uncompressed_bytes": 6988307,
+    "zip_bytes": 2746973,
+    "zip_sha256": "6029ac2088547de692291258c2f9434f56b5b416dfcb8ef85e1c9bab54d0a53f"
+  },
+  {
+    "batch": "batch_09",
+    "files": 11,
+    "uncompressed_bytes": 4233366,
+    "zip_bytes": 532610,
+    "zip_sha256": "9cbc243d166d228e23933067507e69c0925fcbf4700a2291d75ca311afa576de"
+  }
+]
