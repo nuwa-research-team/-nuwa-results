@@ -1,0 +1,8 @@
+{
+  "Luna_parameter_comparison": "completed five arms x200; no parameter candidate passed gate",
+  "candidate_selection": "planned, NOT implemented or run; paused for packaging",
+  "head_pilot_and_tuning": "completed separate historical side branch; not the current API parameter task",
+  "integrated_P4": "completed; no stable improvement",
+  "prompt_P0_P1_P2_P3": "completed; historical exploratory development",
+  "teacher_comparison": "available local snapshot; inspect each protocol/status, do not infer missing final B results"
+}

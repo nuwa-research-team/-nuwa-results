@@ -1,0 +1,342 @@
+[
+  {
+    "bytes": 19539,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/__pycache__/cross_teacher_chain.cpython-312.pyc"
+  },
+  {
+    "bytes": 22780,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/__pycache__/experiment.cpython-312.pyc"
+  },
+  {
+    "bytes": 21509,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/__pycache__/gemini_compare_v2.cpython-312.pyc"
+  },
+  {
+    "bytes": 21091,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/__pycache__/gemini_prompt_B.cpython-312.pyc"
+  },
+  {
+    "bytes": 15755,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/__pycache__/report_cross_teacher.cpython-312.pyc"
+  },
+  {
+    "bytes": 13696,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/__pycache__/report_prompt_B.cpython-312.pyc"
+  },
+  {
+    "bytes": 16039,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/__pycache__/summarize_B_20261115.cpython-312.pyc"
+  },
+  {
+    "bytes": 415,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/commandcode_compare_v1/gpt-6-luna_evaluation.log"
+  },
+  {
+    "bytes": 1020,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/commandcode_compare_v1/luna.stderr.log"
+  },
+  {
+    "bytes": 1312,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/commandcode_compare_v1/luna.stdout.log"
+  },
+  {
+    "bytes": 0,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/commandcode_compare_v1/luna_resume.stderr.log"
+  },
+  {
+    "bytes": 68267,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/commandcode_compare_v1/luna_resume.stdout.log"
+  },
+  {
+    "bytes": 5,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/commandcode_compare_v1/run.lock"
+  },
+  {
+    "bytes": 670,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/commandcode_compare_v1/runner.stderr.log"
+  },
+  {
+    "bytes": 152,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/commandcode_compare_v1/runner.stdout.log"
+  },
+  {
+    "bytes": 29159,
+    "reason": "account_setup_or_quota_metadata",
+    "source": "outputs/d4_teacher_api_20261114/commandcode_smoke/models.json"
+  },
+  {
+    "bytes": 243,
+    "reason": "account_setup_or_quota_metadata",
+    "source": "outputs/d4_teacher_api_20261114/commandcode_smoke/report_20261115T143830Z.json"
+  },
+  {
+    "bytes": 256,
+    "reason": "account_setup_or_quota_metadata",
+    "source": "outputs/d4_teacher_api_20261114/commandcode_smoke/report_20261115T143857Z.json"
+  },
+  {
+    "bytes": 13699,
+    "reason": "account_setup_or_quota_metadata",
+    "source": "outputs/d4_teacher_api_20261114/commandcode_smoke/report_20261115T143954Z.json"
+  },
+  {
+    "bytes": 101,
+    "reason": "account_setup_or_quota_metadata",
+    "source": "outputs/d4_teacher_api_20261114/cross_teacher_v1/authentication_check.json"
+  },
+  {
+    "bytes": 1814745,
+    "reason": "account_setup_or_quota_metadata",
+    "source": "outputs/d4_teacher_api_20261114/cross_teacher_v1/completion_20261115/quota_all_readonly.json"
+  },
+  {
+    "bytes": 784003,
+    "reason": "account_setup_or_quota_metadata",
+    "source": "outputs/d4_teacher_api_20261114/cross_teacher_v1/completion_20261115/quota_readonly.json"
+  },
+  {
+    "bytes": 5,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/cross_teacher_v1/running.lock"
+  },
+  {
+    "bytes": 2230,
+    "reason": "account_setup_or_quota_metadata",
+    "source": "outputs/d4_teacher_api_20261114/GOOGLE_ADC_SETUP.txt"
+  },
+  {
+    "bytes": 3176,
+    "reason": "account_setup_or_quota_metadata",
+    "source": "outputs/d4_teacher_api_20261114/google_adc_smoke/gemini-3.8-flash/requests.json"
+  },
+  {
+    "bytes": 1260,
+    "reason": "account_setup_or_quota_metadata",
+    "source": "outputs/d4_teacher_api_20261114/google_adc_smoke/gemini-3.8-flash/response_0.json"
+  },
+  {
+    "bytes": 1284,
+    "reason": "account_setup_or_quota_metadata",
+    "source": "outputs/d4_teacher_api_20261114/google_adc_smoke/gemini-3.8-flash/response_1.json"
+  },
+  {
+    "bytes": 4839,
+    "reason": "account_setup_or_quota_metadata",
+    "source": "outputs/d4_teacher_api_20261114/google_adc_smoke/gemini-3.8-flash/response_2.json"
+  },
+  {
+    "bytes": 8764,
+    "reason": "account_setup_or_quota_metadata",
+    "source": "outputs/d4_teacher_api_20261114/google_adc_smoke/gemini-3.8-flash/summary.json"
+  },
+  {
+    "bytes": 3242,
+    "reason": "account_setup_or_quota_metadata",
+    "source": "outputs/d4_teacher_api_20261114/google_adc_smoke/requests.json"
+  },
+  {
+    "bytes": 735,
+    "reason": "account_setup_or_quota_metadata",
+    "source": "outputs/d4_teacher_api_20261114/google_adc_smoke/response_0.json"
+  },
+  {
+    "bytes": 1094,
+    "reason": "account_setup_or_quota_metadata",
+    "source": "outputs/d4_teacher_api_20261114/google_adc_smoke/summary.json"
+  },
+  {
+    "bytes": 5295,
+    "reason": "account_setup_or_quota_metadata",
+    "source": "outputs/d4_teacher_api_20261114/google_smoke.py"
+  },
+  {
+    "bytes": 4208270,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/joint_head_dev200_20261116/dev_features.pt"
+  },
+  {
+    "bytes": 30883866,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/joint_head_dev200_20261116/frozen_frontend.pt"
+  },
+  {
+    "bytes": 339365,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/joint_head_dev200_20261116/J.pt"
+  },
+  {
+    "bytes": 339573,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/joint_head_dev200_20261116/original_head_tuning/C0-e12.pt"
+  },
+  {
+    "bytes": 339573,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/joint_head_dev200_20261116/original_head_tuning/C0-e24.pt"
+  },
+  {
+    "bytes": 339573,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/joint_head_dev200_20261116/original_head_tuning/C1-e12.pt"
+  },
+  {
+    "bytes": 339573,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/joint_head_dev200_20261116/original_head_tuning/C1-e24.pt"
+  },
+  {
+    "bytes": 339573,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/joint_head_dev200_20261116/original_head_tuning/C2-e12.pt"
+  },
+  {
+    "bytes": 339573,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/joint_head_dev200_20261116/original_head_tuning/C2-e24.pt"
+  },
+  {
+    "bytes": 339573,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/joint_head_dev200_20261116/original_head_tuning/C3-e12.pt"
+  },
+  {
+    "bytes": 339573,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/joint_head_dev200_20261116/original_head_tuning/C3-e24.pt"
+  },
+  {
+    "bytes": 339573,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/joint_head_dev200_20261116/original_head_tuning/C4-e12.pt"
+  },
+  {
+    "bytes": 339573,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/joint_head_dev200_20261116/original_head_tuning/C4-e24.pt"
+  },
+  {
+    "bytes": 1,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/joint_head_dev200_20261116/original_head_tuning/run.lock"
+  },
+  {
+    "bytes": 15673695,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/joint_head_dev200_20261116/original_head_tuning/selection340_features.pt"
+  },
+  {
+    "bytes": 270221,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/joint_head_dev200_20261116/R.pt"
+  },
+  {
+    "bytes": 1050,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/joint_head_dev200_20261116/resume.stderr.log"
+  },
+  {
+    "bytes": 5815,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/joint_head_dev200_20261116/resume.stdout.log"
+  },
+  {
+    "bytes": 3,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/joint_head_dev200_20261116/run.lock"
+  },
+  {
+    "bytes": 2083,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/joint_head_dev200_20261116/run.stderr.log"
+  },
+  {
+    "bytes": 231,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/joint_head_dev200_20261116/run.stdout.log"
+  },
+  {
+    "bytes": 3996530,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/joint_head_dev200_20261116/tail_joint_map/confirm_features.pt"
+  },
+  {
+    "bytes": 1714981,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/joint_head_dev200_20261116/tail_joint_map/W.pt"
+  },
+  {
+    "bytes": 279988064,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/joint_head_dev200_20261116/train_features.pt"
+  },
+  {
+    "bytes": 11565070,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/joint_head_dev200_20261116/val_features.pt"
+  },
+  {
+    "bytes": 2,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/luna_integrated_prompt200_20261116/run.lock"
+  },
+  {
+    "bytes": 350,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/luna_integrated_prompt200_20261116/run.stderr.log"
+  },
+  {
+    "bytes": 2039,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/luna_integrated_prompt200_20261116/run.stdout.log"
+  },
+  {
+    "bytes": 1,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/luna_parameter_vs_prompt_20261116/run.lock"
+  },
+  {
+    "bytes": 2100,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/luna_prompt_dev200_20261116/resume.stderr.log"
+  },
+  {
+    "bytes": 424,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/luna_prompt_dev200_20261116/resume.stdout.log"
+  },
+  {
+    "bytes": 3,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/luna_prompt_dev200_20261116/run.lock"
+  },
+  {
+    "bytes": 1322,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/luna_prompt_dev200_20261116/run.stderr.log"
+  },
+  {
+    "bytes": 146,
+    "reason": "binary_checkpoint_cache_or_operational_log",
+    "source": "outputs/d4_teacher_api_20261114/luna_prompt_dev200_20261116/run.stdout.log"
+  },
+  {
+    "bytes": 252,
+    "reason": "account_setup_or_quota_metadata",
+    "source": "outputs/d4_teacher_api_20261114/run_google_smoke.ps1"
+  }
+]

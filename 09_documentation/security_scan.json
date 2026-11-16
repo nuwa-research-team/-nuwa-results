@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "patterns_checked": [
+    "provider_key",
+    "oauth_token",
+    "jwt",
+    "private_key",
+    "literal_secret"
+  ],
+  "remaining_findings": [],
+  "scope": "Text pattern checks, credential/setup files excluded; not a guarantee against all possible secret formats.",
+  "transformations": {
+    "resumed_export_files_marked_transformed": 126
+  }
+}

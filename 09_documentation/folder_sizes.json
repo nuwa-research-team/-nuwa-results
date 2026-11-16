@@ -1,0 +1,58 @@
+{
+  ".env.example": {
+    "bytes": 94,
+    "files": 1
+  },
+  ".gitignore": {
+    "bytes": 207,
+    "files": 1
+  },
+  "01_code": {
+    "bytes": 260275,
+    "files": 35
+  },
+  "02_data": {
+    "bytes": 4661291,
+    "files": 6
+  },
+  "03_teacher_comparison": {
+    "bytes": 7503402,
+    "files": 86
+  },
+  "04_prompt_study": {
+    "bytes": 5184307,
+    "files": 39
+  },
+  "05_integrated_prompt": {
+    "bytes": 1455847,
+    "files": 20
+  },
+  "06_luna_parameters": {
+    "bytes": 1694232,
+    "files": 38
+  },
+  "07_head_pilot": {
+    "bytes": 1633552,
+    "files": 144
+  },
+  "08_api_records_deepseek": {
+    "bytes": 13095365,
+    "files": 4
+  },
+  "08_api_records_gemini": {
+    "bytes": 8689504,
+    "files": 3
+  },
+  "08_api_records_luna": {
+    "bytes": 6497588,
+    "files": 4
+  },
+  "09_documentation": {
+    "bytes": 154232,
+    "files": 5
+  },
+  "README.md": {
+    "bytes": 5057,
+    "files": 1
+  }
+}
