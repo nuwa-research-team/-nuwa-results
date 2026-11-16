@@ -1,0 +1,1 @@
+{"action":"Retry prior 402 once via existing bounded recovery before requesting missing slots; retain all HTTP-200 answers","authorization":"User requested API resume after suspected balance exhaustion","prior_http_success":588,"prior_records":589,"unchanged":"Frozen samples, masks, prompts, model, output cap, scoring and B selection","utc":"2026-11-15T08:22:36.434611+00:00"}

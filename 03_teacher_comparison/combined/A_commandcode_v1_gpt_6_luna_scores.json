@@ -1,0 +1,36 @@
+{
+  "all": {
+    "draws": 1000,
+    "hidden": 10488,
+    "packet_exact_pct": 83.50495804729215,
+    "magnitude_mae": 156.95928680396645,
+    "valid_pct": 99.4,
+    "mean_accuracy": 56.23333333333333,
+    "classifiers": {
+      "cnn": {
+        "accuracy": 59.9,
+        "macro_f1": 56.202201521255304
+      },
+      "lstm": {
+        "accuracy": 44.7,
+        "macro_f1": 37.42641708149894
+      },
+      "gru": {
+        "accuracy": 58.599999999999994,
+        "macro_f1": 48.3459122760197
+      },
+      "tst": {
+        "accuracy": 54.6,
+        "macro_f1": 50.99780159782866
+      },
+      "sdae": {
+        "accuracy": 60.8,
+        "macro_f1": 58.11731455279008
+      },
+      "fsnet": {
+        "accuracy": 58.8,
+        "macro_f1": 66.1631521487691
+      }
+    }
+  }
+}

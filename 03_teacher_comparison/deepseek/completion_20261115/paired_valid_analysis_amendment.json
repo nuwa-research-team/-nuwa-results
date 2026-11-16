@@ -1,0 +1,7 @@
+{
+  "utc": "2026-11-15T14:09:53.7600913Z",
+  "reason": "Persistent HTTP 429 before final B scoring",
+  "primary": "Unchanged: all 1000 draws with original invalid-output zero-fill rule",
+  "supplementary": "Also compare three methods on identical draw indices where both prompt variants return valid answers, to distinguish API availability from imputation quality",
+  "limitation": "Availability-selected subset; not a substitute for full-cohort analysis"
+}

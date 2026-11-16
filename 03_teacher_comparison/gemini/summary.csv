@@ -1,0 +1,5 @@
+Model,Valid JSON (%),Packet exact (%),Direction (%),Magnitude MAE (bytes),Signed MAE (bytes),Mean accuracy (%),Mean macro-F1 (%)
+local_TFI,100.0000,89.1400,93.1541,110.1528,118.6601,60.1500,57.2321
+gemini-3.8-flash,99.8000,65.7990,70.2326,428.0086,459.6312,47.2833,38.2544
+gemini-3.5-flash,99.9000,77.8795,81.8364,236.8234,255.0795,54.1500,46.0845
+gemini-3.1-pro-preview,99.8000,81.8555,86.2319,198.2647,212.6051,54.6667,46.3505

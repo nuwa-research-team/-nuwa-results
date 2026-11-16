@@ -1,0 +1,17 @@
+{
+  "recorded_utc": "2026-11-14T14:26:46.2911955Z",
+  "files": [
+    {
+      "file": "gemini_compare_v2.py",
+      "sha256": "ab43fcaa6ea53cd82b1785309d395c1f1f9370b7a7ecce21ac99eb5009a04739"
+    },
+    {
+      "file": "report_gemini_v2.py",
+      "sha256": "d853a0b5c8effe47d47cc7b6b08e8b23fda3335781af5d4ceae0904402ff3ae5"
+    },
+    {
+      "file": "experiment.py",
+      "sha256": "71c0f245d7580bce54d78518cc5105837f5e1b05ea854c8fedf4cc95adde44a2"
+    }
+  ]
+}

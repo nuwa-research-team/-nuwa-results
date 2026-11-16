@@ -1,0 +1,7 @@
+{
+  "utc": "2026-11-14T14:18:24.3301333Z",
+  "pid": 51212,
+  "reason": "Shared queue starvation from slow 3.5 calls and 429; preserve all cached outputs; restart with independent model queues",
+  "max_inflight_at_interrupt": 12,
+  "completion_cache_count": 171
+}
