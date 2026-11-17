@@ -1,0 +1,109 @@
+{
+  "verified_utc": "2026-11-17T13:23:58.509912+00:00",
+  "status": "framework smoke verified; no full-training accuracy claim",
+  "repository": "/mnt/e/-nuwa-results",
+  "runtime": "/root/.local/venvs/restc-distill/bin/python",
+  "run_directory": "/root/Document/data/restc-distillation-runs/framework-v1",
+  "versions": {
+    "torch": "2.7.1+cu128",
+    "transformers": "4.57.6",
+    "peft": "0.18.1",
+    "accelerate": "1.12.0",
+    "bitsandbytes": "0.49.2",
+    "xgrammar": "0.2.9",
+    "google-auth": "2.62.2",
+    "numpy": "2.5.1"
+  },
+  "tests": {
+    "passed": 27,
+    "command": "PYTHONPATH=src /root/.local/venvs/restc-distill/bin/python -m pytest -p no:cacheprovider tests/test_restc_distill.py -q",
+    "coverage": [
+      "strict JSON/schema numeric bounds and key rules",
+      "group-disjoint data and retrieval exclusion",
+      "teacher provenance rejection",
+      "answer-only loss labels and no truncation",
+      "LoRA-only gradients and save/reload equivalence",
+      "abstentions and complete-cohort scoring"
+    ]
+  },
+  "data_audit": {
+    "records": 1920,
+    "unique_groups": 4721,
+    "group_counts": {
+      "train": 3748,
+      "validation": 510,
+      "test": 463
+    },
+    "identical_sequence_overlap": 0,
+    "conflicting_label_groups": 394,
+    "longest_input_tokens": 5525,
+    "input_plus_output_budget_exceeded": 0
+  },
+  "teacher_smoke": {
+    "actual_api_calls": 3,
+    "valid_json": 3,
+    "unique_training_flows": 1,
+    "loss_rates": [
+      0.1,
+      0.2,
+      0.3
+    ],
+    "requested_model": "gemini-3.8-flash",
+    "returned_models": [
+      "gemini-3.8-flash"
+    ]
+  },
+  "student_smoke": {
+    "base_model": "Qwen/Qwen3-4B-Instruct-2507",
+    "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+    "optimizer_steps": 2,
+    "trainable_parameters": 33030144,
+    "nonzero_lora_B_elements": 17694712,
+    "selected_checkpoint": "/root/Document/data/restc-distillation-runs/framework-v1/train-smoke-two-steps/checkpoint-2",
+    "adapter_sha256": "a35ae5d6f161b11d2550102c08b09032c79986523d6e1911f769c01d3652790c",
+    "valid_schema_outputs": 3,
+    "generated_outputs": 3,
+    "unique_test_flows": 1,
+    "decoding": "XGrammar 0.2.9 JSON Schema constrained greedy decoding"
+  },
+  "classification_smoke": {
+    "classifiers": [
+      "CNN",
+      "LSTM",
+      "GRU",
+      "TST",
+      "SDAE",
+      "FS-Net"
+    ],
+    "loss_rates": [
+      0.1,
+      0.2,
+      0.3
+    ],
+    "methods": [
+      "Normal",
+      "Baseline",
+      "ReSTC-student"
+    ],
+    "independent_test": false,
+    "reason": "existing classifier training overlaps regrouped data; this run checks execution only"
+  },
+  "artifacts": {
+    "/root/Document/data/restc-distillation-runs/framework-v1/prepared/manifest.json": "639c1689d983c825856fbae677149c148b26c93e3d9d4e37770a567906b5d45e",
+    "/root/Document/data/restc-distillation-runs/framework-v1/prepared/groups.json": "7a3bb49ea8f6c854492e8222cb257738cac1332367c366d50ee5cef41df4515d",
+    "/root/Document/data/restc-distillation-runs/framework-v1/sft-smoke/manifest.json": "7e465c7769096ce66cbccad5ee83e67e83c318272b3bbb4275c6749936798d62",
+    "/root/Document/data/restc-distillation-runs/framework-v1/train-smoke-two-steps/run.json": "acf97c7537c441b310358068f4f7a2ca31c528a81fc690e0d86c9eb397b52d0d",
+    "/root/Document/data/restc-distillation-runs/framework-v1/train-smoke-two-steps/training_result.json": "0c1c83fc0fd4ea99f03094d819f9e160d2a82a2fe0596216b81185b98111ed5d",
+    "/root/Document/data/restc-distillation-runs/framework-v1/train-smoke-two-steps/adapter/restc.json": "2b6fad30e89fe4890598ebf0d8a4a6dc92879e7ac8831c8f901e2ed987ee5357",
+    "/root/Document/data/restc-distillation-runs/framework-v1/prepared-smoke/manifest.json": "6a6b53e61ce452caa44eb24dd2b506d99d5dac403ac8b66f1c4d9de19e57275a",
+    "/root/Document/data/restc-distillation-runs/framework-v1/student-schema-smoke.jsonl": "05dd8f9ab65842c6af8b096d2dce9d751df9da4c5b3a06812492b50c0ed69518",
+    "/root/Document/data/restc-distillation-runs/framework-v1/student-schema-smoke.manifest.json": "22f728283f385bd4b4906bba3d7a955504426de9d1b8a9eade808067e292e694",
+    "/root/Document/data/restc-distillation-runs/framework-v1/smoke-schema-metrics.json": "912ee344e8f85723d3d2920c9b12a09467c01a86eec371ac27b75aa5ef6d4f69"
+  },
+  "limitations": [
+    "Full 1536-example teacher corpus and full student training have not been run.",
+    "Three inference cases are one held-out unique flow under three masks, not three independent flows.",
+    "Historical TFI results are from a different frozen cohort and are not imported as if comparable.",
+    "A two-step student checkpoint is a smoke artifact, not a deployment or research result."
+  ]
+}

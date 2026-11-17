@@ -1,0 +1,35 @@
+{
+  "module": "/root/Document/data/nuwa-prompt-study-20261117/score_downstream.py",
+  "heads": "/root/Document/data/nuwa-prompt-study-20261117/classification_10_20_30/heads",
+  "independent_test": false,
+  "label_map": {
+    "Weibo": 0,
+    "SMB": 1,
+    "Htbot": 2,
+    "Virut": 3,
+    "Miuref": 4,
+    "Neris": 5,
+    "Nsis-ay": 5,
+    "Zeus": 5
+  },
+  "files": {
+    "/root/Document/data/nuwa-prompt-study-20261117/score_downstream.py": "2474088b5d1d7391a324541f75b43f5c89acd9a7e9bc45c6595a58da90b8f681",
+    "/root/Document/data/nuwa-prompt-study-20261117/study.py": "b74114897ff5959c68c1fba7008cd1833205879090787b023f8d8aeb1c0ed47c",
+    "/root/Document/data/nuwa-prompt-study-20261117/classification_10_20_30/heads/six_cnn.pt": "943ff0d96ceba7a8db60a652b18042543203495c9e1f25cacbd5e88e3b317d56",
+    "/root/Document/data/nuwa-prompt-study-20261117/classification_10_20_30/heads/six_fsnet.pt": "9dcd6882f4b9190686011cc595047a9b052c5a08123065f200d77c771ca06c3d",
+    "/root/Document/data/nuwa-prompt-study-20261117/classification_10_20_30/heads/six_gru.pt": "cb5e7656e71121871bba2002028c539ccb028781f640adb0aff611ae9d1cdcfd",
+    "/root/Document/data/nuwa-prompt-study-20261117/classification_10_20_30/heads/six_lstm.pt": "d3c51d4d79a49622fea19f77e65c1b93efc7425b70605f473beacd95293f0e47",
+    "/root/Document/data/nuwa-prompt-study-20261117/classification_10_20_30/heads/six_sdae.pt": "68d4e1f3967e6dd9e615def37f463232cb6fdebc656534232dfecdb5baf84bf3",
+    "/root/Document/data/nuwa-prompt-study-20261117/classification_10_20_30/heads/six_tst.pt": "43fbc0c237b29fa57ae33bd4717b3f13eac4ff0987b0ca2ae4593df36503bdb1",
+    "/root/Document/data/nuwa-prompt-study-20261117/evaluation_assets/cnn.pt": "cd353ccec17dcc467a90233815e5cf88bc8e74fdd90142fe2becb377bcaab9f3",
+    "/root/Document/data/nuwa-prompt-study-20261117/evaluation_assets/fsnet.pt": "1c969756566c3aeb06ddcdd759d2d20edb15e31aa37f4337749d7f75abf10b84",
+    "/root/Document/data/nuwa-prompt-study-20261117/evaluation_assets/gru.pt": "8c07dcc283ce4ca9ddb0b7941f5a6578e09f78b9488baf12b352b819bd11ec0e",
+    "/root/Document/data/nuwa-prompt-study-20261117/evaluation_assets/lstm.pt": "ce2fe84c5f6deb4b262d08dca2a4cd6fff8049dedb7c0fb01814fb0f91a2987b",
+    "/root/Document/data/nuwa-prompt-study-20261117/evaluation_assets/sdae.pt": "d6591dde701a020c0f355edb5fe2467ffebb3b46db864299493daef468b3c03b",
+    "/root/Document/data/nuwa-prompt-study-20261117/evaluation_assets/tst.pt": "fd668bce77a2ed214254334816c357d554eb79bf15a1a42d7ab44c255ca922f0",
+    "/root/Document/data/nuwa-prompt-study-20261117/evaluation_assets/repaired/models_repaired.py": "e0453779493232f480efb39060b004c48b82f6020572409560454b169706cb5b",
+    "/root/Document/data/nuwa-prompt-study-20261117/evaluation_assets/repaired/train_repaired.py": "4514bb0d31c2311ac40c0d568ca1644c6bb03b8884b44ed25c2d3c7cf0ddd865",
+    "/root/Document/data/nuwa-prompt-study-20261117/evaluation_assets/upstream/mvts_transformer/src/models/ts_transformer.py": "de8104d9c37b3a2999ae88caf09ff482346def8967686ec0f78a6665d7f6ac10",
+    "/root/Document/data/nuwa-prompt-study-20261117/evaluation_assets/first_round/src/models.py": "aeea9b68bbcf7b398f8ebbc4de392ff2159f0a8974d95009d2196bbe5db98fcc"
+  }
+}

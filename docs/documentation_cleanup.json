@@ -1,0 +1,95 @@
+{
+  "utc": "2026-11-17T13:05:06.208470+00:00",
+  "documentation": "README.md",
+  "archive": "/root/Document/data/.nuwa-cleanup-archive/readme-consolidation-20261117T130505Z",
+  "removed_markdown": [
+    {
+      "path": "data/README.md",
+      "sha256": "93936712ed931a1cfd1953466bc65f414fdebf05241f95780e199060057b2d67",
+      "archived": "/root/Document/data/.nuwa-cleanup-archive/readme-consolidation-20261117T130505Z/original_markdown/data/README.md"
+    },
+    {
+      "path": "docs/README.md",
+      "sha256": "cd1c09e59ff44080defe274abec674940934d40d00b0de9b7907e67ee5468e13",
+      "archived": "/root/Document/data/.nuwa-cleanup-archive/readme-consolidation-20261117T130505Z/original_markdown/docs/README.md"
+    },
+    {
+      "path": "docs/provenance/package_readme.md",
+      "sha256": "5c98ec88b769082ffe018588a09b9601906974ed3bb6266a97a3cbf7701828c7",
+      "archived": "/root/Document/data/.nuwa-cleanup-archive/readme-consolidation-20261117T130505Z/original_markdown/docs/provenance/package_readme.md"
+    },
+    {
+      "path": "docs/provenance/upload_guide.md",
+      "sha256": "24330acf3d2e69925197def509b72fb29dcc661bccde772124a68aedebf92ec7",
+      "archived": "/root/Document/data/.nuwa-cleanup-archive/readme-consolidation-20261117T130505Z/original_markdown/docs/provenance/upload_guide.md"
+    },
+    {
+      "path": "environment/README.md",
+      "sha256": "4bf42718c4fae73dcd9c27be5cd57eba552889e219b787831b167c0adab0702b",
+      "archived": "/root/Document/data/.nuwa-cleanup-archive/readme-consolidation-20261117T130505Z/original_markdown/environment/README.md"
+    },
+    {
+      "path": "paper/README.md",
+      "sha256": "c98c01460537c2bd3325dd3ddd4d693335c793cb646671dc28a988f49f66ec1e",
+      "archived": "/root/Document/data/.nuwa-cleanup-archive/readme-consolidation-20261117T130505Z/original_markdown/paper/README.md"
+    },
+    {
+      "path": "prompts/README.md",
+      "sha256": "cb4494899107875d3b365789a45b2a608ef18bc6737f86520148dc5e7cf55bf3",
+      "archived": "/root/Document/data/.nuwa-cleanup-archive/readme-consolidation-20261117T130505Z/original_markdown/prompts/README.md"
+    },
+    {
+      "path": "results/README.md",
+      "sha256": "d7df3d81b1cc9ba2714518f4a218b7d3e1318fefddfa946a16e436197fcfdbce",
+      "archived": "/root/Document/data/.nuwa-cleanup-archive/readme-consolidation-20261117T130505Z/original_markdown/results/README.md"
+    },
+    {
+      "path": "results/evidence/README.md",
+      "sha256": "7720d98a2ecc925cf14b54a87f20f8a4321762128d80e9410ac0c04382d8e951",
+      "archived": "/root/Document/data/.nuwa-cleanup-archive/readme-consolidation-20261117T130505Z/original_markdown/results/evidence/README.md"
+    },
+    {
+      "path": "results/first_round/README.md",
+      "sha256": "e8a260d18bc545f8b462d54ec0043668cc647ddaf3f1cc4c95fb9c22bd1f58a4",
+      "archived": "/root/Document/data/.nuwa-cleanup-archive/readme-consolidation-20261117T130505Z/original_markdown/results/first_round/README.md"
+    },
+    {
+      "path": "results/revised/README.md",
+      "sha256": "40cedbd254f3d175cd3873251130ef02cedb68ac1b22b6f26f3428adbf551989",
+      "archived": "/root/Document/data/.nuwa-cleanup-archive/readme-consolidation-20261117T130505Z/original_markdown/results/revised/README.md"
+    },
+    {
+      "path": "results/viewer/README.md",
+      "sha256": "72dad6e12561c4230ad5f76774987ee3b63f1ed5a6fabaf4d21c79b6843852e6",
+      "archived": "/root/Document/data/.nuwa-cleanup-archive/readme-consolidation-20261117T130505Z/original_markdown/results/viewer/README.md"
+    },
+    {
+      "path": "results/viewer/source_data/README.md",
+      "sha256": "c3f2eff008cba411f65a5bb94acb7031cd9a32f904c95581ec4a9f4f9dc2a9b8",
+      "archived": "/root/Document/data/.nuwa-cleanup-archive/readme-consolidation-20261117T130505Z/original_markdown/results/viewer/source_data/README.md"
+    },
+    {
+      "path": "src/README.md",
+      "sha256": "9fb82a3b90ab2f15687cbeedc4d73f1bf97e5897cb48422defeb0ebb14efc302",
+      "archived": "/root/Document/data/.nuwa-cleanup-archive/readme-consolidation-20261117T130505Z/original_markdown/src/README.md"
+    },
+    {
+      "path": "src/SOURCE.md",
+      "sha256": "c82891afd51047e2f5ca12f89c1fa89d2cbbf5ea1646744dd118102c3dc58551",
+      "archived": "/root/Document/data/.nuwa-cleanup-archive/readme-consolidation-20261117T130505Z/original_markdown/src/SOURCE.md"
+    },
+    {
+      "path": "src/viewer/README.md",
+      "sha256": "579d276fdd862e1804072c02044274e10e7264fe6e148d1b1f33474bad80052c",
+      "archived": "/root/Document/data/.nuwa-cleanup-archive/readme-consolidation-20261117T130505Z/original_markdown/src/viewer/README.md"
+    }
+  ],
+  "historical_records": "Original provenance JSON retains historical paths; these are not current documentation links.",
+  "removed_public_copy": "/root/Document/data/nuwa-d4-tailnet-viewer/prompt-study/gemini-native/prompts/README.md",
+  "remaining_markdown": [
+    "README.md"
+  ],
+  "protected_files_unchanged": 13,
+  "legacy_viewer_table_values_unchanged": true,
+  "readme_sha256": "692042a5ddd689a3224814c421e5acd9c86adcddedc878a0de5f5beb303e5f74"
+}

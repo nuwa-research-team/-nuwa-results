@@ -1,1 +1,0 @@
-{"eligible":["P1","P2"],"rule":"best dev mean_accuracy strictly exceeds P0 and macro-F1 is not lower; tie by macro-F1 then MAE then arm name","selected":"P2","utc":"2026-11-16T05:34:23.142192+00:00"}

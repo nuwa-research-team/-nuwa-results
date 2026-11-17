@@ -1,0 +1,21 @@
+{
+  "utc": "2026-11-17T12:35:36.782326+00:00",
+  "scheme": "ReSTC",
+  "completion_model": "Gemini 3.8 Flash",
+  "numeric_cells_checked": 224,
+  "unchanged_metric_cells": true,
+  "rows": 28,
+  "restc_rows": 7,
+  "unchanged_evidence_sha256": {
+    "classification_summary.json": "73bf5b343adf757591b02c9ef131ff83bcb1a188b3e73b84f734554693033a47",
+    "classification_predictions.json": "b13cf71f75713a43b6fe04858dbafb7115f125c708d0f27a8497d00d89a845d4",
+    "completed_sequences.json": "5e0bfc0703d51c808db11c9946cb9a796b4189c279d44a6511b0a7758e0cfcc9",
+    "protocol.json": "e4b3f487edc97f5980135095af4bdebcd9faa5a3cb410f2d46ea1603e8df5952",
+    "heads_manifest.json": "f93a703182c3affc6e7773f09a4a383052de3691bb238dbf3e173e0f26301e1b",
+    "classification_metric_audit.json": "69c2295a13a9a84998ec1ec861269833431f2b921c6fbbe186264617d62ad88f"
+  },
+  "web_url": "http://100.100.0.38:8879/prompt-study/gemini-native/",
+  "published_fingerprint": "4c7041d146195e1f15aa5584974d3afe8f2b98ad8bf0467aa86fc40585df0c68",
+  "published_bytes_verified": true,
+  "archive": "/root/Document/data/.nuwa-cleanup-archive/restc-naming-20261117T123502Z"
+}

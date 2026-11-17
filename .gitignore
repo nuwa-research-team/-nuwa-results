@@ -3,3 +3,17 @@ __pycache__/
 *.py[cod]
 .venv/
 venv/
+
+# Local datasets; keep documentation, configs, manifests and frozen small inputs.
+/data/*
+!/data/author_configs/
+!/data/manifests/
+!/data/experiment_inputs.zip
+!/data/d4_ustc/
+/data/d4_ustc/*
+!/data/d4_ustc/dataset_summary.json
+
+# ReSTC generated training artifacts and model weights
+/runs/
+/models/adapters/
+.pytest_cache/

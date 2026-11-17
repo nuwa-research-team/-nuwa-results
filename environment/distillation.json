@@ -1,0 +1,57 @@
+{
+  "raw_data": "data/d4_ustc/raw.pkl",
+  "raw_sha256": "312617767197cad4c931dbc57f8fdaead8185c13e6e9e10b07458ce3ffabb3d6",
+  "seed": 42,
+  "split_fractions": [
+    0.8,
+    0.1,
+    0.1
+  ],
+  "flow_limits": {
+    "train": 512,
+    "validation": 64,
+    "test": 64
+  },
+  "loss_rates": [
+    0.1,
+    0.2,
+    0.3
+  ],
+  "retrieval_k": 4,
+  "teacher_prompt": "prompts/restc_system.en.txt",
+  "student_prompt": "prompts/restc_student.en.txt",
+  "teacher": {
+    "project": "project-ffdab9cb-2c47-436b-be1",
+    "location": "global",
+    "model": "gemini-3.8-flash",
+    "max_output_tokens": 4096,
+    "thinking_level": "LOW"
+  },
+  "student": {
+    "model": "Qwen/Qwen3-4B-Instruct-2507",
+    "revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+    "local_files_only": true,
+    "quantization": "nf4",
+    "max_length": 8192,
+    "max_new_tokens": 2048
+  },
+  "lora": {
+    "r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "target_modules": "all-linear",
+    "bias": "none"
+  },
+  "training": {
+    "epochs": 3,
+    "learning_rate": 0.0002,
+    "batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "warmup_ratio": 0.03,
+    "weight_decay": 0.01,
+    "max_grad_norm": 1.0,
+    "eval_steps": 50,
+    "save_steps": 50,
+    "seed": 42
+  }
+}

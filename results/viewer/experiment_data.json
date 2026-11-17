@@ -115577,8 +115577,8 @@
     "scope": {
       "label": "实验范围与数据集",
       "paths": [
-        "../README.md",
-        "../../data/README.md"
+        "../../README.md#results",
+        "../../README.md#data"
       ]
     }
   },

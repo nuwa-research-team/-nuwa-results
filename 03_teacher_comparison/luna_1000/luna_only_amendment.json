@@ -1,1 +1,0 @@
-{"reason": "Astra HTTP 403 MODEL_NOT_IN_PLAN; user requests Luna only. Add active model selector; requests/scoring unchanged; reuse Luna draw 0.", "old_code_sha256": "df1f79b6dee2b3ea8f4cac6109c3e7548f495d46eb90c87105cef5d262ed0ae5", "new_code_sha256": "5d0d0f71bc37fd172b96e5de2bee6f8bc80c245894b5523de404285287de8c91"}

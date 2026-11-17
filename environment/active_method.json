@@ -1,0 +1,22 @@
+{
+  "model": "gemini-3.8-flash",
+  "variant": "optimized",
+  "provider": "Google Vertex AI",
+  "experiment_directory": "/root/Document/data/nuwa-prompt-study-20261117/gemini_38_rates_10_20_30",
+  "classification_directory": "/root/Document/data/nuwa-prompt-study-20261117/classification_10_20_30",
+  "python": "/root/.local/venvs/nuwa-gemini/bin/python",
+  "report_url": "http://100.100.0.38:8879/prompt-study/gemini-native/",
+  "selected_by_user": true,
+  "comparison_records_retained": [
+    "Baseline",
+    "TFI",
+    "GPT-6 Luna optimized"
+  ],
+  "selected_utc": "2026-11-17T12:27:20.162174+00:00",
+  "framework": "ReSTC",
+  "framework_full_name": "Retrieval-Enhanced Structured Traffic Completion",
+  "framework_name_zh": "检索增强的结构化流量补全框架",
+  "model_display_name": "Gemini 3.8 Flash",
+  "prompt_snapshot": "prompts/restc_system.en.txt",
+  "prompt_documentation": "README.md#prompt"
+}

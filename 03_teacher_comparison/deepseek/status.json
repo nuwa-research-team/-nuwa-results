@@ -1,1 +1,0 @@
-{"model":"gemini-3.1-pro-preview","stage":"B_first_pass","utc":"2026-11-15T09:18:31.559640+00:00","variants":{"behavior":{"completed":42,"errors":{"http_failure":1},"http_success":41,"last_5min_count":31,"valid":41},"plain":{"completed":41,"errors":{"http_failure":2},"http_success":39,"last_5min_count":30,"valid":39}}}

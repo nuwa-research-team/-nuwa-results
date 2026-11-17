@@ -1,0 +1,35 @@
+{
+  "result": "PASS",
+  "classification_manifest": "PASS",
+  "prediction_replay": {
+    "cnn": {
+      "inputs": 12,
+      "mismatches": 0
+    },
+    "lstm": {
+      "inputs": 12,
+      "mismatches": 0
+    },
+    "gru": {
+      "inputs": 12,
+      "mismatches": 0
+    },
+    "tst": {
+      "inputs": 12,
+      "mismatches": 0
+    },
+    "sdae": {
+      "inputs": 12,
+      "mismatches": 0
+    },
+    "fsnet": {
+      "inputs": 12,
+      "mismatches": 0
+    }
+  },
+  "new_api_calls": 0,
+  "gemini_entry_prepare": "PASS",
+  "active_model": "gemini-3.8-flash",
+  "numbered_root_directories": 0,
+  "published_report": "All five published artifact hashes unchanged; Tailscale HTTP reachable"
+}

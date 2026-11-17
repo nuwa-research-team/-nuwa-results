@@ -1,1 +1,0 @@
-{"excluded_models":["gpt-6-astra"],"models":{"gpt-6-luna":{"api_remaining_seconds":0.0,"completed":1000,"elapsed_seconds":842.1139769554138,"http_success":1000,"inflight":0,"samples_per_minute":69.53928043293894,"scored":true,"total":1000,"valid":994}},"pid":17824,"state":"complete","utc":"2026-11-15T15:07:26.153648+00:00"}

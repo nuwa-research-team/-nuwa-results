@@ -1,1 +1,0 @@
-{"confirmation_run":false,"eligible":[],"full_run":false,"rule":"Among medium/high/temp0 with mean Accuracy>P0_repeat and macroF1>=P0_repeat, rank by Accuracy then macroF1 then lower MAE; otherwise no improved parameter candidate. Report all arms, not only winner.","selected":null}
