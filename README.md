@@ -2,163 +2,171 @@
 
 **Retrieval-Enhanced Structured Traffic Completion**
 
-检索增强的结构化流量补全框架 · 当前补全模型：**Gemini 3.8 Flash**
+Teacher and current API completion model: **Gemini 3.8 Flash**. Default distillation student: **Qwen3-4B-Instruct-2507**.
 
-[分类结果网页](http://100.100.0.38:8879/prompt-study/gemini-native/) · [英文 Prompt](prompts/restc_system.en.txt) · [完整请求实例](prompts/example_request.json) · [运行配置](environment/active_method.json)
+[Run ReSTC](#run) · [Distillation and LoRA](#distillation) · [WSL walkthrough](#wsl-run) · [Classification results (Tailscale)](http://100.100.0.38:8879/prompt-study/gemini-native/) · [Teacher prompt](prompts/restc_system.en.txt)
 
-ReSTC 根据可见包检索相似训练流量，将原始位置、方向和长度编码成无损 JSON，通过严格 JSON Schema 生成缺失包，再将补全后的流量送入 CNN、LSTM、GRU、TST、SDAE、FS-Net 分类器。分类表保留 Baseline、TFI 和 Luna 对照。
+ReSTC retrieves similar training flows using observed packets, encodes packet positions, directions, and lengths as lossless JSON, and completes missing packets with a strict JSON Schema. Completed flows are evaluated with CNN, LSTM, GRU, TST, SDAE, and FS-Net classifiers. The current classification report includes Baseline, TFI, and Luna comparisons.
+
+Repository: [nuwa-research-team/ReSTC](https://github.com/nuwa-research-team/ReSTC). The active WSL checkout is `/root/Document/data/ReSTC`.
 
 <a id="run"></a>
-## 运行
+## Run the existing Gemini experiment
 
-所有实验在 WSL 执行。现有数据、环境和缓存已配置：
+Run all experiments on WSL. The current server already has the data, environment, and response cache:
 
 ```bash
-cd /root/Document/data/-nuwa-results
+cd /root/Document/data/ReSTC
 /root/.local/venvs/nuwa-gemini/bin/python src/gemini/run.py prepare
 /root/.local/venvs/nuwa-gemini/bin/python src/gemini/run.py run
 ```
 
-`prepare` 校验冻结输入和来源；`run` 复用已完成响应，只在缺少响应时调用 API。当前 10%、20%、30% 各 64 条响应均已完成。Google ADC 凭据由 WSL 管理，不存入仓库。
+`prepare` verifies frozen inputs and provenance. `run` reuses completed responses and calls the API only for missing responses. The current 10%, 20%, and 30% loss conditions each have 64 completed responses. Google Application Default Credentials (ADC) are managed on WSL and are not stored in Git.
 
-运行入口委托给配置指定的 WSL 实验目录。仅克隆仓库还需要准备数据、权重和该实验目录；它不是不依赖外部文件的独立安装包。
+This entry point delegates to the WSL experiment directory specified in [active_method.json](environment/active_method.json). A fresh clone also needs the data, weights, and external experiment directory; cloning alone does not reproduce that server setup. The distillation implementation below is included in this repository.
 
 <a id="prompt"></a>
-## Prompt 与结构化输出
+## Prompts and structured output
 
-| 文件 | 内容 |
+| File | Contents |
 |---|---|
-| [prompts/restc_system.en.txt](prompts/restc_system.en.txt) | 实际使用的英文系统 Prompt |
-| [prompts/example_request.json](prompts/example_request.json) | 一条真实 Gemini 请求：系统 Prompt、输入 JSON、输出 Schema |
-| [prompts/manifest.json](prompts/manifest.json) | 提示词来源、原始请求位置和 SHA-256 |
+| [Teacher system prompt](prompts/restc_system.en.txt) | Exact English system prompt used by the current Gemini experiment |
+| [Example request](prompts/example_request.json) | A real Gemini request containing the system prompt, JSON input, and output schema |
+| [Prompt manifest](prompts/manifest.json) | Source locations, request identity, and SHA-256 checksums |
+| [Student system prompt](prompts/restc_student.en.txt) | English prompt for the local distillation student |
 
-已核对三档共 **192 条请求**，系统 Prompt 逐字一致。输入的 `training_examples` 来自原训练集，仅根据目标的可见位置检索；`target` 保留原始位置、方向 P/N、长度与缺口。输出形如 `{"values":{"4":1500,"6":-52}}`（格式示例），每个缺失位置恰好对应一个非零带符号整数，绝对值为 1–1600。输出 Schema 按每条流量的缺失位置生成。
+All **192 requests** across the three loss conditions use the same teacher system prompt. `training_examples` come from the original training split and are retrieved using observed target positions only. `target` retains original positions, directions P/N, packet lengths, and missing slots.
 
-系统 Prompt 由实验目录中的 `structured_study.py`（`SYSTEM`、`body()`）与 `study.py`（`EXPLANATION`、`RLE`、`DEMO`）构造。`prompts/` 是实际请求的可读快照；现有实验执行三档 `requests.json` 中的冻结请求。修改 Prompt 应生成新实验版本，不覆盖历史请求或结果。
+An example output is `{"values":{"4":1500,"6":-52}}`. Every missing position must appear exactly once and map to a nonzero signed integer with magnitude 1–1600. Each request has a schema built from its own missing positions.
+
+The teacher prompt is assembled by `structured_study.py` (`SYSTEM`, `body()`) and `study.py` (`EXPLANATION`, `RLE`, `DEMO`) in the external experiment directory. Files in `prompts/` are readable snapshots. Existing experiments execute their frozen `requests.json` files. Prompt changes should create a new experiment version rather than overwrite historical requests or results.
 
 <a id="results"></a>
-## 实验结果与位置
+## Results and evaluation scope
 
-[当前分类三线表](http://100.100.0.38:8879/prompt-study/gemini-native/)展示 Normal、Loss 10%、20%、30% 下的 **Acc 与六类 macro-F1**。Average 为六个分类器指标的算术平均。
+The [current classification table](http://100.100.0.38:8879/prompt-study/gemini-native/) reports **accuracy and six-class macro-F1** under Normal, Loss 10%, Loss 20%, and Loss 30%. The Average row is the arithmetic mean across the six classifiers. The page is available through the configured Tailscale network.
 
-本轮使用固定 64 条开发流量；59 条完整序列也出现在原训练集中。原六分类输出头缺失，因此冻结已有骨干，在原训练集 47,862 条、验证集 5,319 条上重训输出头，按验证损失选取后冻结。所有方法使用相同流量、掩码和权重。这是 USTC 八类到六类的工程适配，不能作为论文原始复现或独立测试集 SOTA。
+This experiment uses 64 fixed development flows; 59 complete sequences also occur in the original training set. The original six-class output heads were unavailable, so new heads were trained on the original 47,862 training and 5,319 validation flows while keeping the existing backbones frozen. Heads were selected by validation loss and then frozen. All compared methods use the same flows, masks, and classifier weights.
 
-实验根目录：`/root/Document/data/nuwa-prompt-study-20261117`。
+These results are an engineering adaptation from eight USTC classes to six labels. They are not an exact reproduction of the paper or independent-test evidence of state-of-the-art performance.
 
-| 相对实验根目录的位置 | 内容 |
+Experiment root: `/root/Document/data/nuwa-prompt-study-20261117`.
+
+| Path relative to the experiment root | Contents |
 |---|---|
-| `gemini_38_rates_10_20_30/loss10/`、`loss20/`、`loss30/` | 三档固定请求、流量与原始响应 |
-| `classification_10_20_30/heads/` | 新训练的六分类输出头和训练记录 |
-| `classification_10_20_30/classification_summary.json` | 分类指标汇总 |
-| `classification_10_20_30/classification_predictions.json` | 逐样本分类预测 |
-| `classification_10_20_30/classification_metric_audit.json` | 独立指标重算 |
-| `evaluation_assets/` | 六种分类器骨干权重及执行实现 |
+| `gemini_38_rates_10_20_30/loss10/`, `loss20/`, `loss30/` | Frozen requests, flows, and raw API responses |
+| `classification_10_20_30/heads/` | Newly trained six-class heads and training records |
+| `classification_10_20_30/classification_summary.json` | Classification metrics |
+| `classification_10_20_30/classification_predictions.json` | Per-sample predictions |
+| `classification_10_20_30/classification_metric_audit.json` | Independent metric recomputation |
+| `evaluation_assets/` | Backbone weights and executable classifier implementations |
 
-仓库内的 [results/revised/metrics_合并132.json](results/revised/metrics_合并132.json) 和 [历史查看器](results/viewer/index.html)属于此前八类实验，和当前 ReSTC 的 64 条开发实验分开记录。`results/evidence/` 保存完整预测、掩码、检查点与执行代码 ZIP，均可直接解压。旧查看器可用 `python3 src/viewer/build.py` 重建；当前 ReSTC 网页构建入口在实验目录的 `classification_10_20_30/build_report.py`。
+The repository's [merged historical metrics](results/revised/metrics_合并132.json) and [historical viewer](results/viewer/index.html) belong to earlier eight-class experiments. They are separate from the current 64-flow development experiment. `results/evidence/` contains ZIP archives of full predictions, masks, checkpoints, and execution code. Rebuild the historical viewer with `python3 src/viewer/build.py`. The current ReSTC report builder is `classification_10_20_30/build_report.py` in the external experiment directory.
 
 <a id="data"></a>
-## 数据与 Git 范围
+## Data and Git tracking
 
-当前数据为 `data/d4_ustc/raw.pkl`。原始数据只保留在 WSL，已加入 `.gitignore` 并取消 Git 跟踪。新克隆仓库需另行准备数据。
+The local dataset is `data/d4_ustc/raw.pkl`. It remains on WSL, is ignored by Git, and has been removed from the current Git index. New checkouts must obtain the dataset separately.
 
-数据目录继续纳入版本管理范围的内容为 `author_configs/`、`manifests/`、[dataset_summary.json](data/d4_ustc/dataset_summary.json) 和固定实验输入 `experiment_inputs.zip`。Prompt、配置和实验结果不因这条数据忽略规则被排除。
+Tracked data assets include `author_configs/`, `manifests/`, [dataset_summary.json](data/d4_ustc/dataset_summary.json), and the frozen small input archive `experiment_inputs.zip`. Prompts, configuration, and experiment results remain tracked.
 
-| 场景 | 来源 |
+| Scenario | Source |
 |---|---|
-| d1 | [CIC-AAGM2017](https://www.unb.ca/cic/datasets/android-adware.html)；论文命名与作者代码所链 CIC-AndMal2017 存在差异，不能混作同一数据集 |
+| d1 | [CIC-AAGM2017](https://www.unb.ca/cic/datasets/android-adware.html). The paper's naming differs from the CIC-AndMal2017 link in the authors' code; these datasets must not be treated as interchangeable. |
 | d2 | [CIRA-CIC-DoHBrw-2020](https://www.unb.ca/cic/datasets/dohbrw-2020.html) |
 | d3 | [CIC-IoT-2023](https://www.unb.ca/cic/datasets/iotdataset-2023.html) |
-| d4 | [USTC-TFC2016](https://github.com/davidyslu/USTC-TFC2016)，当前本地实验来源 |
+| d4 | [USTC-TFC2016](https://github.com/davidyslu/USTC-TFC2016), the source of the current local experiments |
 
 <a id="environment"></a>
-## 环境
+## Environment
 
-当前 WSL 解释器：`/root/.local/venvs/nuwa-gemini/bin/python`，已核对 Python **3.12.13**、PyTorch **2.7.1+cu128**。API 调用使用现有 Google 授权。
+The existing Gemini experiment uses `/root/.local/venvs/nuwa-gemini/bin/python`, verified with Python **3.12.13** and PyTorch **2.7.1+cu128**. API calls use the existing Google authorization.
 
-`environment/environment.yml`、`pip-list-server.txt`、`server_environment.json` 和根目录 `requirements.txt` 保留历史 Nüwa 依赖记录。历史 Miniforge 定义及 Torch 2.1.2 安装说明不等于当前 Gemini 实验环境，也未经本轮重新安装验证。原 PCAP 处理另需 tshark/Wireshark。
+`environment/environment.yml`, `pip-list-server.txt`, `server_environment.json`, and the root `requirements.txt` preserve historical Nüwa dependency records. The historical Miniforge definition and Torch 2.1.2 installation instructions do not describe the current Gemini environment and were not reinstalled during this work. The original PCAP processing scripts additionally require tshark/Wireshark.
 
 <a id="distillation"></a>
-## 蒸馏与 LoRA 微调
+## Distillation and LoRA fine-tuning
 
-**ReSTC 教师：Gemini 3.8 Flash；默认学生：Qwen3-4B-Instruct-2507。** 学生模型及固定权重版本可在 [distillation.json](environment/distillation.json) 中修改。蒸馏决定“向谁学习”，LoRA 决定“更新哪些参数”：此处使用 Gemini 生成的完整 JSON 答案做序列级知识蒸馏，通过 LoRA 更新学生的低秩参数。Gemini API 没有提供完整词表 logits，因此没有实现或声称使用 KL/logit 蒸馏。
+**Teacher: Gemini 3.8 Flash. Default student: Qwen3-4B-Instruct-2507.** The student model, pinned revision, and training settings are defined in [distillation.json](environment/distillation.json).
+
+This pipeline performs sequence-level knowledge distillation: Gemini generates complete JSON targets, and the student learns them through assistant-token cross-entropy. LoRA specifies which parameters are updated. The Gemini API does not expose full-vocabulary logits, so this implementation does not perform KL/logit distillation.
 
 ```mermaid
 flowchart LR
-    A[原始流量按完整序列分组] --> B[互斥的训练 / 验证 / 测试集]
-    B --> C[10% / 20% / 30% 固定随机缺口]
-    C --> D[教师：可见流量 + 训练集检索示例]
-    D --> E[Gemini 3.8 Flash 的严格 JSON 答案]
-    C --> F[学生输入：仅可见流量与缺口]
-    E --> G[答案 token 交叉熵 + QLoRA]
+    A[Group raw flows by complete sequence] --> B[Disjoint training, validation, and test groups]
+    B --> C[Fixed 10%, 20%, and 30% packet-loss masks]
+    C --> D[Teacher input: observations and training examples]
+    D --> E[Gemini 3.8 Flash JSON targets]
+    C --> F[Student input: observations and missing positions]
+    E --> G[Assistant-token cross-entropy with QLoRA]
     F --> G
-    G --> H[Qwen 学生 adapter]
-    H --> I[独立测试流量补全]
-    I --> J[包特征指标 / 分类器 Acc 与 macro-F1]
+    G --> H[Qwen student adapter]
+    H --> I[Complete held-out test flows]
+    I --> J[Packet metrics and downstream accuracy / macro-F1]
 ```
 
-教师拥有训练集检索示例，学生只看到目标的无损 RLE JSON；学生部署时不依赖 Gemini 或检索库。原始真值单独保存，只用于验证、评测，以及显式选择的 `--target truth` 监督学习对照。训练 Prompt 不含标签或被遮蔽的真实值。
+The teacher sees retrieved training examples. The student sees only the target's lossless run-length encoding, so student deployment does not require Gemini or a retrieval bank. Original ground truth is stored separately for validation, evaluation, and the explicit `--target truth` supervised-learning control. Student inputs contain neither class labels nor hidden target values.
 
-- **数据隔离**：完整有符号包长序列的 SHA-256 决定组，同组只进入一个集合，比例为 80% / 10% / 10%；三个丢包率共享组划分。每个选中的唯一序列每档生成一条训练记录，不按重复频次重复训练。标签冲突计入审计。
-- **教师检索**：只在训练分组中检索同长度流量，排除目标自身组；距离仅使用可见位置。取最多 4 条最近邻；无候选时证据列表为空，数量写入清单，不制造示例或补全答案。
-- **监督目标**：仅 assistant 答案及结束 token 计算交叉熵，系统说明、输入、padding 的标签均为 `-100`。验证损失对照真实缺失值，按验证损失保存最优 adapter；测试集不参与选模型。
-- **LoRA**：默认 rank 16、alpha 32、dropout 0.05、`all-linear`；NF4 4-bit 基座、double quantization、BF16 计算。基座冻结，只训练 LoRA 参数。配置 `quantization: "none"` 可做普通 LoRA。
-- **输出处理**：学生采用 XGrammar 的 JSON Schema 约束解码，在生成阶段限制合法 token；结构约束不提供隐藏真值，也不保证数值准确。原始输出严格检查位置、重复键、整数范围与完整性。不修改可见包、不补默认值、不修复非法 JSON；学生无效输出记为拒答。包长 MAE 只统计有效输出并同时给出覆盖率；整体正确率把无效缺口计为错误。
-- **可追溯性**：保存数据、请求、教师响应、配置及 adapter 哈希。数据超长直接报错，不静默截断；续训必须指定原 checkpoint 并保持训练配置一致。
+- **Data isolation:** the SHA-256 of each complete signed-length sequence identifies its group. Groups are assigned to training, validation, or test with 80% / 10% / 10% proportions. All loss rates share this partition. Each selected unique target contributes one record per rate; duplicate frequency does not duplicate training records. Conflicting labels are audited.
+- **Teacher retrieval:** retrieve up to four nearest training groups of the same sequence length, excluding the target's own group. Distance uses observed positions only. An empty candidate set produces an empty evidence list, recorded in the manifest; no examples or answers are fabricated.
+- **Training objective:** only assistant answer tokens and the end token contribute to cross-entropy. System instructions, user inputs, and padding use labels of `-100`. Validation loss is computed against true missing values, and the best adapter is selected by validation loss. Test data is not used for selection.
+- **LoRA:** defaults are rank 16, alpha 32, dropout 0.05, and `all-linear` targets. QLoRA uses an NF4 4-bit base model, double quantization, and BF16 computation. The base model is frozen; only LoRA parameters are trained. Set `quantization` to `"none"` for ordinary LoRA.
+- **Structured generation:** XGrammar applies per-input JSON Schema constraints during token generation. Structure constraints do not supply hidden values or establish numerical accuracy. Outputs are checked for exact positions, duplicate keys, integer bounds, and completeness. Observed packets are preserved. Invalid outputs are abstentions, without default filling or JSON repair. Length MAE covers valid outputs and is accompanied by coverage; overall accuracy counts invalid slots as errors.
+- **Provenance:** data, requests, teacher responses, configuration, and adapters are hashed. Overlength data raises an error instead of being silently truncated. Resuming training requires an explicit checkpoint and matching run settings.
 
-代码按阶段组织，全部位于仓库内：
-
-| 文件 | 实现 |
+| File | Responsibility |
 |---|---|
-| [common.py](src/restc_distill/common.py) | JSON 校验、无损编码、恢复与哈希 |
-| [data.py](src/restc_distill/data.py) | 分组划分、固定掩码、教师检索、蒸馏样本构建 |
-| [teacher.py](src/restc_distill/teacher.py) | Vertex AI / ADC、JSON Schema、原始响应缓存与导出 |
-| [student.py](src/restc_distill/student.py) | 答案 token 标签、LoRA/QLoRA、续训、adapter 保存与学生推理 |
-| [evaluate.py](src/restc_distill/evaluate.py) | 包长/方向指标、六种现有分类器及 Acc/macro-F1 |
-| [restc_student.en.txt](prompts/restc_student.en.txt) | 学生使用的英文 Prompt |
-| [test_restc_distill.py](tests/test_restc_distill.py) | 数据隔离、严格校验、监督标签、LoRA 梯度和重载检查 |
+| [common.py](src/restc_distill/common.py) | Strict JSON validation, lossless encoding, reconstruction, and hashes |
+| [data.py](src/restc_distill/data.py) | Group partitioning, fixed masks, teacher retrieval, and SFT dataset construction |
+| [teacher.py](src/restc_distill/teacher.py) | Vertex AI / ADC, JSON Schema requests, response caching, and prediction export |
+| [student.py](src/restc_distill/student.py) | Assistant-only labels, LoRA/QLoRA training, resume, adapter saving, and inference |
+| [evaluate.py](src/restc_distill/evaluate.py) | Packet metrics and six-classifier accuracy / macro-F1 |
+| [Student prompt](prompts/restc_student.en.txt) | English system prompt used by the student |
+| [Tests](tests/test_restc_distill.py) | Isolation, strict validation, loss labels, LoRA gradients, and adapter reload checks |
 
-### 在 WSL 运行
+<a id="wsl-run"></a>
+### Step-by-step WSL walkthrough
 
-教师 **Gemini 3.8 Flash 通过 API 调用，无需下载权重**；本地训练的是 **Qwen3-4B-Instruct-2507 学生模型**。当前 WSL 已有完整的三个学生权重分片、数据和 Google ADC 授权配置。以下步骤在同一个 WSL 终端按顺序执行，每一步成功后再继续。
+Gemini 3.8 Flash is called through the API; no teacher weights need to be downloaded. The local student is Qwen3-4B-Instruct-2507. The current WSL server already has all three student weight shards, the dataset, and Google ADC configuration. Run the following steps in the same WSL terminal, continuing only after each step succeeds.
 
-新环境 `/root/.local/venvs/restc-distill` 与现有 Gemini 环境分开，复用 WSL PyTorch 2.7.1+cu128。依赖固定在 [requirements-distillation.txt](environment/requirements-distillation.txt)。学生配置固定 revision，并开启 `local_files_only`；更换模型时需明确准备权重并更新配置。
+The separate environment `/root/.local/venvs/restc-distill` reuses WSL's PyTorch 2.7.1+cu128. Package versions are pinned in [requirements-distillation.txt](environment/requirements-distillation.txt). Student loading uses a pinned revision and `local_files_only`; a different student requires preparing its weights and updating the configuration explicitly.
 
-1. **连接 WSL，打开持久终端。** 如果在 Mac 终端，先执行：
+1. **Connect to WSL and start a persistent terminal.** From a Mac terminal:
 
    ```bash
    ssh wsl-lan
    ```
 
-   在 WSL 中打开 tmux：
+   On WSL, start or attach to tmux:
 
    ```bash
    tmux new-session -A -s restc-distill
    ```
 
-   进入 tmux 后设置环境。后续命令均在这个终端执行：
+   Inside tmux, initialize the environment for all subsequent commands:
 
    ```bash
-   cd /root/Document/data/-nuwa-results
+   cd /root/Document/data/ReSTC
    source /root/.local/venvs/restc-distill/bin/activate
    export PYTHONPATH="$PWD/src"
    export RESTC_RUN=/root/Document/data/restc-distillation-runs/experiment-v1
    ```
 
-2. **下载或补齐权重。当前缓存完整，可以跳过。** 下载的固定版本必须和配置一致：
+2. **Download or complete the student weights. Skip this on the configured server, where the cache is complete.** Use the revision pinned in the configuration:
 
    ```bash
    hf download Qwen/Qwen3-4B-Instruct-2507 \
      --revision cdbee75f17c01a7cc42f958dc650907174af0554
    ```
 
-3. **准备数据。** 默认 512 条唯一训练流量 × 10%、20%、30% 三档缺口，共 **1,536 条训练样本**；验证、测试各 64 条唯一流量 × 三档，各 **192 条样本**。需要调整样本量时，先修改 [distillation.json](environment/distillation.json)，再执行：
+3. **Prepare the dataset.** Defaults are 512 unique training flows across three loss rates, giving **1,536 training records**. Validation and test each contain 64 unique flows across three rates, or **192 records** each. Edit [distillation.json](environment/distillation.json) before this step to change sample counts.
 
    ```bash
    python -m restc_distill prepare \
      --out "$RESTC_RUN/prepared"
    ```
 
-4. **生成 Gemini 教师答案。** 此步骤实际调用 API，默认最多生成 1,536 条答案，计入当前 Google Cloud 项目用量。成功响应按请求哈希缓存；中断后可重跑同一命令，复用已完成的有效响应：
+4. **Generate Gemini teacher targets.** This makes real API calls and charges usage to the configured Google Cloud project. The default run generates up to 1,536 targets. Successful responses are cached by request hash; rerunning the same command reuses completed valid responses.
 
    ```bash
    python -m restc_distill teacher \
@@ -166,7 +174,7 @@ flowchart LR
      --out "$RESTC_RUN/teacher"
    ```
 
-5. **构建蒸馏训练集。** 将“可见流量与缺口 → 教师 JSON 答案”组成训练样本：
+5. **Build the distillation training set.** Each sample pairs observed traffic and missing positions with the teacher's JSON answer.
 
    ```bash
    python -m restc_distill build-sft \
@@ -175,7 +183,7 @@ flowchart LR
      --out "$RESTC_RUN/sft"
    ```
 
-6. **启动学生蒸馏训练。** 默认 3 个 epoch、4-bit QLoRA、rank 16、学习率 0.0002；只更新 LoRA 参数，只对答案部分计算损失：
+6. **Train the student.** Defaults are 3 epochs, 4-bit QLoRA, rank 16, and a learning rate of 0.0002. Only LoRA parameters are updated, and only answer tokens contribute to loss.
 
    ```bash
    python -m restc_distill train \
@@ -183,9 +191,9 @@ flowchart LR
      --out "$RESTC_RUN/student"
    ```
 
-   最优 adapter 保存到 `$RESTC_RUN/student/adapter/`。它需要和原始 Qwen 基座共同加载，下一步会自动完成。
+   The selected adapter is saved to `$RESTC_RUN/student/adapter/`. It must be loaded with the original Qwen base model; the next command handles both.
 
-7. **用学生补全测试数据。**
+7. **Complete test flows with the student.**
 
    ```bash
    python -m restc_distill infer \
@@ -194,7 +202,7 @@ flowchart LR
      --out "$RESTC_RUN/student-test.jsonl"
    ```
 
-8. **计算补全指标与分类 Acc / F1。**
+8. **Compute packet metrics and downstream accuracy / F1.**
 
    ```bash
    python -m restc_distill evaluate \
@@ -205,42 +213,42 @@ flowchart LR
      --allow-development-classifiers
    ```
 
-   `$RESTC_RUN/metrics.json` 包含三档丢包率的补全指标，以及 Normal、Baseline、学生补全后的六分类器结果。现有分类器沿用旧划分训练，分类指标属于开发对照。只需包特征指标时，省略最后两项分类器参数。
+   `$RESTC_RUN/metrics.json` contains packet metrics and results for Normal, Baseline, and completed student flows across the six classifiers and three loss rates. Existing classifiers were trained under the original split, so these classification results are development comparisons. Omit the last two classifier options to compute packet metrics only.
 
-运行中按 **Ctrl+B，松开，再按 D** 可离开 tmux，任务继续运行。重新连接 WSL 后恢复终端：
+To detach while keeping the job running, press **Ctrl+B**, release, then press **D**. After reconnecting to WSL, reattach with:
 
 ```bash
 tmux attach -t restc-distill
 ```
 
-新实验应换一个 `RESTC_RUN` 目录名；`prepare`、`build-sft` 和结果文件不覆盖已有输出。回到同一次实验时，在原 tmux 终端继续操作，或重新设置相同的环境变量。
+Choose a new `RESTC_RUN` directory for a new experiment. Prepared data, SFT datasets, and result files are not overwritten. To continue an existing experiment, reuse its tmux terminal or restore the same environment variables.
 
-快速验证可在 `teacher` 与 `build-sft` 上都加 `--limit 3`，训练加 `--max-steps 2 --validation-limit 3 --eval-steps 1`，使用独立输出目录。`infer --limit` 用于调试；正式评测要求覆盖完整冻结集合，不会静默缩小分母。续训示例：原 `train` 命令补 `--resume "$RESTC_RUN/student/checkpoint-50"`。
+For a small execution check, use `--limit 3` on both `teacher` and `build-sft`, then add `--max-steps 2 --validation-limit 3 --eval-steps 1` to `train`, using a separate output directory. `infer --limit` is for debugging; formal evaluation requires the complete frozen cohort. To resume training, append `--resume "$RESTC_RUN/student/checkpoint-50"` to the original training command with unchanged run settings and an existing checkpoint.
 
-教师对照可运行 `teacher --split test --predictions "$RESTC_RUN/teacher-test.jsonl"`（同时提供 `--data`、`--out`）；评测通过多次 `--predictions 名称=文件` 合并教师、学生和 TFI 等方法。每条预测需有 `id`、`input_sha256`、`answer`，必须覆盖同一批流量和缺口。原来 64 条开发样本的 TFI 结果不能直接套到新分组测试集。
+For a teacher comparison, run `teacher --split test --predictions "$RESTC_RUN/teacher-test.jsonl"`, also specifying `--data` and `--out`. Repeat `--predictions Name=file` during evaluation to compare teacher, student, and TFI predictions. Every record needs `id`, `input_sha256`, and `answer`, and every method must cover the same flows and masks. TFI results from the earlier 64-flow development cohort cannot be applied directly to the new grouped test split.
 
-上面的分类评测会验证已有骨干、输出头和执行代码的 SHA-256，然后计算 Normal、Baseline 和各补全方法在每档丢包率的 Acc / 六类 macro-F1。现有分类器在原始划分上训练，与新分组测试集存在交叠，因此此开关明确输出 `independent_test: false`，只能作开发对照。独立分类结论需要按新分组协议重新训练分类器，不能只更换学生模型后宣称独立测试提升。
+Classifier evaluation verifies the SHA-256 of the backbones, output heads, and execution code. It then reports accuracy and fixed-six-label macro-F1 for each loss condition. Historical classifier training overlaps the new grouped test split, so `--allow-development-classifiers` explicitly produces `independent_test: false`. Independent downstream conclusions require retraining classifiers under the new group partition.
 
-输出保存在仓库外的 `restc-distillation-runs/`，不提交原始数据、API 凭据或训练权重。框架验证记录见 [distillation_verification.json](docs/distillation_verification.json)；小规模训练检查只证明代码链路可运行，不代表蒸馏后准确率已经提升。 已完成 **27 项测试**、**3 条真实教师请求**、Qwen3-4B 的 **2 步 QLoRA 训练**、adapter 重载、**3/3 合法 JSON 输出**和六分类器执行检查。三个教师样本来自一条训练流量的三档缺口；三个推理样本来自另一条测试流量的三档缺口。
+Generated artifacts are stored outside the repository under `restc-distillation-runs/`. Raw datasets, API credentials, and training weights are not committed. [Verification records](docs/distillation_verification.json) document **27 passing tests**, **3 real teacher requests**, **2 QLoRA optimizer steps**, adapter reload, **3/3 schema-valid outputs**, and execution through all six classifiers. The three teacher examples are three masks of one training flow; the three inference cases are three masks of a different test flow. These checks establish that the framework runs; full training and accuracy improvements have not been established.
 
-实现依据：[PEFT 量化与 QLoRA](https://huggingface.co/docs/peft/en/developer_guides/quantization)、[Transformers 对话模板](https://huggingface.co/docs/transformers/chat_templating)、[Qwen 官方模型说明](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507)、[XGrammar 官方接入示例](https://xgrammar.mlc.ai/docs/latest/start/quick_start.html)。
+Implementation references: [PEFT quantization and QLoRA](https://huggingface.co/docs/peft/en/developer_guides/quantization), [Transformers chat templates](https://huggingface.co/docs/transformers/chat_templating), [the official Qwen model card](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507), and [the official XGrammar integration guide](https://xgrammar.mlc.ai/docs/latest/start/quick_start.html).
 
 <a id="layout"></a>
-## 目录与来源
+## Repository layout and provenance
 
-| 目录 | 用途 |
+| Directory | Purpose |
 |---|---|
-| `src/gemini/` | ReSTC 运行入口 |
-| `src/restc_distill/` | 教师答案蒸馏、LoRA/QLoRA 训练、学生推理与评测 |
-| `src/classifiers/` | 本地分类器实现、六类映射与第三方许可 |
-| `src/data_process/` 及原上游脚本 | Nüwa 数据预处理、预训练与 TFI 参考实现 |
-| `prompts/` | 英文 Prompt、完整请求实例与来源清单 |
-| `data/`、`models/` | 数据、固定输入与骨干权重来源 |
-| `results/` | 历史指标、对照记录与证据归档 |
-| `environment/` | 当前运行配置与历史环境记录 |
-| `paper/` | [论文正文](paper/Nuwa_TON_2025.pdf)、[补充材料](paper/Nuwa_Supplementary_Material.pdf)及提取文本 |
-| `docs/` | 文件校验、整理记录与历史来源 JSON |
+| `src/gemini/` | Existing ReSTC Gemini experiment entry point |
+| `src/restc_distill/` | Teacher distillation, LoRA/QLoRA training, student inference, and evaluation |
+| `src/classifiers/` | Local classifiers, six-label mapping, and third-party license |
+| `src/data_process/` and original upstream scripts | Nüwa preprocessing, pretraining, and reference TFI implementation |
+| `prompts/` | English prompts, a complete request example, and provenance |
+| `data/`, `models/` | Data, frozen inputs, and backbone provenance |
+| `results/` | Historical metrics, reference comparisons, and evidence archives |
+| `environment/` | Current configuration and historical environment records |
+| `paper/` | [Main paper](paper/Nuwa_TON_2025.pdf), [supplementary material](paper/Nuwa_Supplementary_Material.pdf), and extracted text |
+| `docs/` | File checksums, cleanup records, migration records, and historical provenance JSON |
 
-上游 Nüwa 来源为 [Timeless-zfqi/Nuwa](https://github.com/Timeless-zfqi/Nuwa)，固定提交 `2d4d5bf3bfdf1f7c3b9a8bd310ace5baa49bcf65`。保留的上游脚本存在已知问题：`TFM.py` 缩进无效，`pre-training.py` 使用标准 collator，`impute_missing_features.py` 把 `list.append()` 返回值赋给 `n_pad`。实际工程评估实现另见 [execution_code.zip](results/evidence/execution_code.zip)。第三方 [Transformer 许可证](src/classifiers/transformer_reference/LICENSE)保留。
+The upstream Nüwa reference is [Timeless-zfqi/Nuwa](https://github.com/Timeless-zfqi/Nuwa), pinned to commit `2d4d5bf3bfdf1f7c3b9a8bd310ace5baa49bcf65`. Preserved upstream scripts have known issues: invalid indentation in `TFM.py`, use of a standard collator in `pre-training.py`, and assignment of the return value of `list.append()` to `n_pad` in `impute_missing_features.py`. The actual engineering evaluation implementation is also archived in [execution_code.zip](results/evidence/execution_code.zip). The third-party [Transformer license](src/classifiers/transformer_reference/LICENSE) is retained.
 
-项目只保留本文件作为 Markdown 文档入口。历史上传说明和重复 README 已移至仓库外归档；恢复记录见 [documentation_cleanup.json](docs/documentation_cleanup.json)。此前编号目录的整理记录见 [cleanup_manifest.json](docs/cleanup_manifest.json)。`docs/provenance/` 中的 JSON 保留历史路径，当前文件清单见 [docs/manifest.json](docs/manifest.json)。
+This README is the only Markdown documentation entry point. Duplicate documentation and obsolete numbered directories were archived outside the repository; see [documentation cleanup](docs/documentation_cleanup.json) and [layout cleanup](docs/cleanup_manifest.json). Historical audit and provenance records retain their original execution paths. The [path migration record](docs/path_migration.json) maps the former checkout location to `/root/Document/data/ReSTC` and records changes to active runtime references. [docs/manifest.json](docs/manifest.json) contains the current repository file checksums.

@@ -1,0 +1,77 @@
+{
+  "utc": "2026-11-17T14:20:53.865233+00:00",
+  "old_repository": "/root/Document/data/-nuwa-results",
+  "new_repository": "/root/Document/data/ReSTC",
+  "github_repository": "https://github.com/nuwa-research-team/ReSTC",
+  "backup_directory": "/root/Document/data/.restc-path-migration/20261117T142012Z",
+  "external_changes": [
+    {
+      "path": "/root/Document/data/nuwa-prompt-study-20261117/study.py",
+      "backup": "/root/Document/data/.restc-path-migration/20261117T142012Z/experiment/study.py",
+      "before_sha256": "b74114897ff5959c68c1fba7008cd1833205879090787b023f8d8aeb1c0ed47c",
+      "after_sha256": "0d129cdb16f2d60855f99e94f7b2cbccbdcbd782236b7e115d79cfa1fb5567f8",
+      "change": "repository path relocation and exact dependency hashes only"
+    },
+    {
+      "path": "/root/Document/data/nuwa-prompt-study-20261117/manifest.json",
+      "backup": "/root/Document/data/.restc-path-migration/20261117T142012Z/experiment/manifest.json",
+      "before_sha256": "2443e85b38d39a3166f9b4f19191a060921e9fb865bf75cbb8fcaf5dfe6766e2",
+      "after_sha256": "703a5bfb7507f2a92558d536d7df2ceec3af44f100bcd7ff541e0fc7466439ba",
+      "change": "repository path relocation and exact dependency hashes only"
+    },
+    {
+      "path": "/root/Document/data/nuwa-prompt-study-20261117/classification_10_20_30/manifest.json",
+      "backup": "/root/Document/data/.restc-path-migration/20261117T142012Z/experiment/classification_10_20_30/manifest.json",
+      "before_sha256": "4b300a090abcbcea12ad550fa45a92bf1a37711c35c174208f9e23ed520fb797",
+      "after_sha256": "4ab03f66b675a00fbb4dce7b345167e21d2177a25172fe6d4872b1b4296fdd8d",
+      "change": "repository path relocation and exact dependency hashes only"
+    },
+    {
+      "path": "/root/Document/data/nuwa-prompt-study-20261117/confirmation/prepared_manifest.json",
+      "backup": "/root/Document/data/.restc-path-migration/20261117T142012Z/experiment/confirmation/prepared_manifest.json",
+      "before_sha256": "d1b2393893c70f62e508dafd7e0b7e0b1ff7b4bc6df3af4a7bf71e2d5ea8adcc",
+      "after_sha256": "fd93cba56bb5948f1ce3215eac75c7916c9eca5d5affa918ff8144b577ee7de9",
+      "change": "repository path relocation and exact dependency hashes only"
+    },
+    {
+      "path": "/root/Document/data/nuwa-prompt-study-20261117/gemini_38_rates_10_20_30/manifest.json",
+      "backup": "/root/Document/data/.restc-path-migration/20261117T142012Z/experiment/gemini_38_rates_10_20_30/manifest.json",
+      "before_sha256": "9fbd3cbf98ea18a6b30806b7b0979e218c6bec2ecdb342e324f52b62e62e719a",
+      "after_sha256": "c0e0cb49415df0f9a4d81f779fd8049fc9bca8a240be742ccfbc19003386a508",
+      "change": "repository path relocation and exact dependency hashes only"
+    },
+    {
+      "path": "/root/Document/data/nuwa-prompt-study-20261117/classification_10_20_30/provenance.json",
+      "backup": "/root/Document/data/.restc-path-migration/20261117T142012Z/experiment/classification_10_20_30/provenance.json",
+      "before_sha256": "1b82646c27305cfa39758ed052586cb3b9c8373b168943abfe8bfb03da29ac0d",
+      "after_sha256": "49eae068e4e2b6806d87d8637945455d4440de2b703e27235c3ff38d592c37ba",
+      "change": "repository path relocation and exact dependency hashes only"
+    },
+    {
+      "path": "/root/Document/data/nuwa-prompt-study-20261117/gemini_38/manifest.json",
+      "backup": "/root/Document/data/.restc-path-migration/20261117T142012Z/experiment/gemini_38/manifest.json",
+      "before_sha256": "709cfbe8e29aad02247e3a0a54f0e137060ef21a37699a788be27e69575f24b9",
+      "after_sha256": "350d94f016ce6d0758a6aab6d9c2264a46759ecdbbd247e5ce9bc4bc83202996",
+      "change": "repository path relocation and exact dependency hashes only"
+    }
+  ],
+  "preserved": "Dataset bytes, model weights, prompts, requests, responses, masks and numeric metrics are unchanged. Historical audit records retain the paths recorded at execution time.",
+  "verification": {
+    "verified_utc": "2026-11-17T14:23:31.984416+00:00",
+    "tests_passed": 27,
+    "readme_local_links_valid": true,
+    "readme_shell_syntax_valid": true,
+    "readme_english_prose": true,
+    "markdown_files": [
+      "README.md"
+    ],
+    "gemini_frozen_input_prepare": "passed",
+    "classifier_frozen_input_prepare": "passed",
+    "classifier_replay_matches_before_rename": true,
+    "packet_metrics_match_before_rename": true,
+    "tailnet_viewer_http_status": 200,
+    "raw_dataset_sha256": "312617767197cad4c931dbc57f8fdaead8185c13e6e9e10b07458ce3ffabb3d6",
+    "classifier_replay_artifact": "/root/Document/data/.restc-path-migration/20261117T142012Z/classifier-replay.json",
+    "full_training_launched": false
+  }
+}
