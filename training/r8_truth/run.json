@@ -1,0 +1,90 @@
+{
+  "identity": {
+    "config": {
+      "raw_sha256": "312617767197cad4c931dbc57f8fdaead8185c13e6e9e10b07458ce3ffabb3d6",
+      "seed": 42,
+      "split_fractions": [
+        0.8,
+        0.1,
+        0.1
+      ],
+      "flow_limits": {
+        "train": 512,
+        "validation": 64,
+        "test": 64
+      },
+      "loss_rates": [
+        0.1,
+        0.3,
+        0.5
+      ],
+      "retrieval_k": 4,
+      "teacher": {
+        "location": "global",
+        "model": "gemini-3.8-flash",
+        "max_output_tokens": 4096,
+        "thinking_level": "LOW"
+      },
+      "student": {
+        "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+        "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+        "local_files_only": true,
+        "quantization": "none",
+        "max_length": 8192,
+        "max_new_tokens": 4096
+      },
+      "lora": {
+        "bias": "none",
+        "lora_alpha": 16,
+        "lora_dropout": 0.05,
+        "r": 8,
+        "target_modules": "all-linear"
+      },
+      "training": {
+        "epochs": 3,
+        "learning_rate": 5e-05,
+        "batch_size": 1,
+        "gradient_accumulation_steps": 8,
+        "warmup_ratio": 0.03,
+        "weight_decay": 0.01,
+        "max_grad_norm": 1.0,
+        "eval_steps": 96,
+        "save_steps": 96,
+        "seed": 42
+      },
+      "update_mode": "lora",
+      "initial_adapter": {
+        "path": "distilled_r8",
+        "sha256": "187ad1fa9bf50b284e5a208fd49b676c7c2072493821876e04d6b45ca9b7f723"
+      }
+    },
+    "sft_manifest_sha256": "300c50af25bd33142ae24f673929610267535d38df95f6e69c070f3615b2d3bb",
+    "max_steps": -1,
+    "validation_limit": null,
+    "eval_steps": 96
+  },
+  "data": {
+    "train": {
+      "records": 1536,
+      "max_tokens": 7629,
+      "assistant_tokens": 228804
+    },
+    "validation": {
+      "records": 192,
+      "max_tokens": 7372,
+      "assistant_tokens": 29336
+    }
+  },
+  "trainable_parameters": 2442240,
+  "base_parameters": 134515008,
+  "update_mode": "lora",
+  "total_parameters": 136957248,
+  "student_system": "Impute missing signed IP packet lengths in one bidirectional network flow. Magnitudes are bytes clipped at 1600. Every original packet slot has exactly one signed integer. Output JSON with a single key values whose value is an object. Each property name must be the original zero-based missing position written as a string, and its value must be the nonzero signed integer at that position, in [-1600,1600]. Include every required position exactly once, and no observed positions. Do not output an array or explanatory text. Complete the missing packet features using the whole observed flow, preserving original positions. P denotes positive direction and N negative direction; these are arbitrary opposite endpoints, not known application roles. Direction and byte length are separate variables. Infer direction and magnitude for each missing position from both preceding and following observations and the sequence boundary, then encode the signed integer. A missing direction is unknown. The loss mask is uniformly sampled over the original slots. It provides positions and no hidden values. Do not infer that a gap continues a repeated run solely because it is a gap. Do not merge or delete slots. The input is a lossless run-length encoding. Each row [start,end,direction,bytes] covers all original positions from start to end inclusive. [start,end,null,null] is an unknown interval. Adjacent intervals have no omitted slots. Repeated intervals describe observations only, not a constraint on missing values. Total_slots is the original sequence length.",
+  "objective": "stage-B ground-truth LoRA continuation after teacher distillation",
+  "continuation": {
+    "initial_adapter_sha256": "187ad1fa9bf50b284e5a208fd49b676c7c2072493821876e04d6b45ca9b7f723",
+    "exact_loaded_tensors": 420,
+    "only_existing_adapter_continued": true,
+    "optimizer_reset": true
+  }
+}

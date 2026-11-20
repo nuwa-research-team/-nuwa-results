@@ -1,0 +1,128 @@
+[
+  {
+    "file": "table_01.json",
+    "section": "1　随机丢包与代表方法对比",
+    "title": "全部流量 · 662 条",
+    "rows": 82
+  },
+  {
+    "file": "table_02.json",
+    "section": "1　随机丢包与代表方法对比",
+    "title": "VPN 流量 · 328 条",
+    "rows": 82
+  },
+  {
+    "file": "table_03.json",
+    "section": "1　随机丢包与代表方法对比",
+    "title": "普通流量 · 334 条",
+    "rows": 82
+  },
+  {
+    "file": "table_04.json",
+    "section": "2　补全模型参数量",
+    "title": "基座与适配器",
+    "rows": 5
+  },
+  {
+    "file": "table_05.json",
+    "section": "3　随机与连续丢包鲁棒性",
+    "title": "r=8 蒸馏与本地 TFI",
+    "rows": 62
+  },
+  {
+    "file": "table_06.json",
+    "section": "3　随机与连续丢包鲁棒性",
+    "title": "r=16 蒸馏与本地 TFI · 原六种分类器",
+    "rows": 44
+  },
+  {
+    "file": "table_07.json",
+    "section": "3　随机与连续丢包鲁棒性",
+    "title": "r=16 蒸馏与本地 TFI · 额外两种分类器",
+    "rows": 20
+  },
+  {
+    "file": "table_08.json",
+    "section": "4　LoRA 秩敏感性",
+    "title": "六分类器与平均值",
+    "rows": 23
+  },
+  {
+    "file": "table_09.json",
+    "section": "4　LoRA 秩敏感性",
+    "title": "额外两种分类器",
+    "rows": 11
+  },
+  {
+    "file": "table_10.json",
+    "section": "5　四组累积消融",
+    "title": "消融设置",
+    "rows": 5
+  },
+  {
+    "file": "table_11.json",
+    "section": "5　四组累积消融",
+    "title": "r=8 四组消融",
+    "rows": 42
+  },
+  {
+    "file": "table_12.json",
+    "section": "5　四组累积消融",
+    "title": "r=8 最终模型与配对对照 · 逐分类器差值",
+    "rows": 44
+  },
+  {
+    "file": "table_13.json",
+    "section": "5　四组累积消融",
+    "title": "r=16 四组消融 · 原六种分类器",
+    "rows": 30
+  },
+  {
+    "file": "table_14.json",
+    "section": "5　四组累积消融",
+    "title": "r=16 四组消融 · 额外两种分类器",
+    "rows": 14
+  },
+  {
+    "file": "table_15.json",
+    "section": "5　四组累积消融",
+    "title": "r=8 相邻步骤与累计变化",
+    "rows": 5
+  },
+  {
+    "file": "table_16.json",
+    "section": "5　四组累积消融",
+    "title": "r=16 相邻步骤与累计变化",
+    "rows": 5
+  },
+  {
+    "file": "table_17.json",
+    "section": "附表　缺包位置的包长幅值 MAE（字节）",
+    "title": "丢包基线与最终模型",
+    "rows": 8
+  },
+  {
+    "file": "table_18.json",
+    "section": "附表　缺包位置的包长幅值 MAE（字节）",
+    "title": "r=8 鲁棒性与四组消融",
+    "rows": 16
+  },
+  {
+    "file": "table_19.json",
+    "section": "附表　缺包位置的包长幅值 MAE（字节）",
+    "title": "r=16 鲁棒性",
+    "rows": 7
+  },
+  {
+    "file": "table_20.json",
+    "section": "附表　缺包位置的包长幅值 MAE（字节）",
+    "title": "LoRA 秩对比",
+    "rows": 4
+  },
+  {
+    "file": "table_21.json",
+    "section": "附表　缺包位置的包长幅值 MAE（字节）",
+    "title": "r=16 四组消融",
+    "rows": 5
+  }
+]

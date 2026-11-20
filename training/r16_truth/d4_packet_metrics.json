@@ -1,0 +1,52 @@
+{
+  "prepared_manifest_sha256": "62b2f5bbd02f09e17f6425df5f5dae29723313f45ba46b0d3d009abd4e1ebc23",
+  "split": "validation",
+  "prediction_files": {
+    "smollm2-135m-instruct_lora_truth": {
+      "path": "validation.jsonl",
+      "sha256": "4fd1d221f00e47900c62c2bd2126144addfda8a3c3f56e904d2e809cb898dc8f"
+    }
+  },
+  "packet_metrics": {
+    "0.1": {
+      "smollm2-135m-instruct_lora_truth": {
+        "flows": 64,
+        "valid_flows": 64,
+        "missing_slots": 426,
+        "valid_slots": 426,
+        "valid_flow_rate": 1.0,
+        "exact_accuracy_all_slots": 0.539906103286385,
+        "direction_accuracy_all_slots": 0.6502347417840375,
+        "length_mae_valid_slots": 429.24178403755866,
+        "invalid_policy": "abstain; exact/direction count invalid slots as errors; MAE reports valid slots only"
+      }
+    },
+    "0.3": {
+      "smollm2-135m-instruct_lora_truth": {
+        "flows": 64,
+        "valid_flows": 64,
+        "missing_slots": 1286,
+        "valid_slots": 1286,
+        "valid_flow_rate": 1.0,
+        "exact_accuracy_all_slots": 0.5318818040435459,
+        "direction_accuracy_all_slots": 0.6399688958009331,
+        "length_mae_valid_slots": 425.62830482115083,
+        "invalid_policy": "abstain; exact/direction count invalid slots as errors; MAE reports valid slots only"
+      }
+    },
+    "0.5": {
+      "smollm2-135m-instruct_lora_truth": {
+        "flows": 64,
+        "valid_flows": 64,
+        "missing_slots": 2141,
+        "valid_slots": 2141,
+        "valid_flow_rate": 1.0,
+        "exact_accuracy_all_slots": 0.48995796356842597,
+        "direction_accuracy_all_slots": 0.6198038299859878,
+        "length_mae_valid_slots": 491.72209248014946,
+        "invalid_policy": "abstain; exact/direction count invalid slots as errors; MAE reports valid slots only"
+      }
+    }
+  },
+  "classification": null
+}
