@@ -1,0 +1,26 @@
+{
+  "parent": "187ad1fa9bf50b284e5a208fd49b676c7c2072493821876e04d6b45ca9b7f723",
+  "sft": "300c50af25bd33142ae24f673929610267535d38df95f6e69c070f3615b2d3bb",
+  "batch": 24,
+  "rates": [
+    0.1,
+    0.3,
+    0.5
+  ],
+  "inputs": {
+    "random137": "7bf0f6dd6aac4f34d4f64177f99c493068aa191c6f8c2df64fca99aae79cb353",
+    "burst137": "71e7aa21c29db14d2bd24b90035a3a4cc4e9d5aa2ff26d995d297db186f59850",
+    "ABCD": "224c0009f717cfb8c224db701948d7f8582fe1e6dce6ae0383b516d543cac451",
+    "ABCDE": "224c0009f717cfb8c224db701948d7f8582fe1e6dce6ae0383b516d543cac451"
+  },
+  "reuse": {
+    "random42": "rank8",
+    "AB": "ab_raw",
+    "ABC": "abc_base",
+    "TFI": "same previously scored masks"
+  },
+  "base": "SmolLM2-135M-Instruct",
+  "rank": 8,
+  "training": "one D4 ground-truth continuation, fixed 3 epochs, 576 steps; no ISCX training or checkpoint selection",
+  "scoring": "frozen heads; six-classifier average, supported 5-class macro-F1, missing-position magnitude MAE; RF/SVM separate"
+}

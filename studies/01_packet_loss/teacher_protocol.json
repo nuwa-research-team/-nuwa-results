@@ -1,0 +1,14 @@
+{
+  "gemini": {
+    "location": "global",
+    "model": "gemini-3.8-flash",
+    "max_output_tokens": 4096,
+    "thinking_level": "LOW"
+  },
+  "luna": "gpt-6-luna / local dev-selected P2",
+  "flows": 662,
+  "requests_per_model": 1986,
+  "retrieval_train_flows": 2656,
+  "split_sha": "827fd8172880770c98407a72b39a640e74fb64220da000c0448cbecb86923a1d",
+  "fallback": "invalid output fills masked positions with zero; API access errors halt"
+}

@@ -1,0 +1,8 @@
+{
+  "base_parameters": 134515008,
+  "trainable_parameters": 4884480,
+  "total_parameters": 139399488,
+  "tfi_total": 45681156,
+  "adapter_sha256": "2adc9f8c52fa7f5893108a2f987f0cbb6a1a1a16096d6d8db39060aa66e387a2",
+  "sft_sha256": "fbf10bfb5bd55fea37ebf39ef9f987cbdcf3a0e0c447bad209f31ce74e28bf02"
+}

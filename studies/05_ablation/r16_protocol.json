@@ -1,0 +1,35 @@
+{
+  "order": [
+    "ab_raw",
+    "abc_base",
+    "behavior",
+    "abcde_truth"
+  ],
+  "base": {
+    "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+    "local_files_only": true,
+    "quantization": "none",
+    "max_length": 8192,
+    "max_new_tokens": 4096
+  },
+  "stage_a": "2adc9f8c52fa7f5893108a2f987f0cbb6a1a1a16096d6d8db39060aa66e387a2",
+  "stage_b": "6eb406054ae7d21f0bea32bb214905a003e1308935b3686feaacac4e266c7039",
+  "continued_lora_tensors": 420,
+  "flows": 662,
+  "rows": 1986,
+  "masks_sha256": "be3e1e66b6a33adad81881252a6332b43573636d249106c3c87e8610e8562217",
+  "raw_sha256": "0ec0174bfe7f1342886437cd90845db31089396e0cb26ce238342a78317a5c4f",
+  "processed_sha256": "224c0009f717cfb8c224db701948d7f8582fe1e6dce6ae0383b516d543cac451",
+  "definition": {
+    "A": "paired whole-packet masking at 10/30/50 percent",
+    "B": "base SmolLM2-135M-Instruct, greedy constrained signed-length completion",
+    "C": "visible-only behavioral preprocessing (lossless intervals and visible summary; schema description matches representation)",
+    "D": "load selected Stage A Gemini-answer-distilled rank16 adapter",
+    "E": "load Stage B continuation of same adapter, supervised on D4 training-only true packet lengths"
+  },
+  "normalization": "All four receive signed IP lengths, same visible slots, gap indices and encoding-appropriate schema description. PCAP payload and labels are not model inputs.",
+  "contrasts": "ABC minus AB tests the preprocessing bundle. ABCD minus ABC tests Stage A distillation as implemented with LoRA. ABCDE minus ABCD tests subsequent true-length LoRA continuation.",
+  "order_of_measurement": "Existing behavior job supplies ABCD; execute remaining three after phase four and the shared ABCD inference; report in cumulative order.",
+  "notes": "LoRA rank sensitivity stays in experiment 4. Stage B is evaluated regardless of its result."
+}

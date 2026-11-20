@@ -1,0 +1,124 @@
+{
+  "reference": "studies/01_packet_loss",
+  "runs": [
+    {
+      "run": "rank8",
+      "directory": "studies/04_lora_rank/r8",
+      "input_id": "input_3dfba6ef3952",
+      "packet_outputs": [
+        "135M"
+      ],
+      "records": 1986
+    },
+    {
+      "run": "rank32",
+      "directory": "studies/04_lora_rank/r32",
+      "input_id": "input_3dfba6ef3952",
+      "packet_outputs": [
+        "135M"
+      ],
+      "records": 1986
+    },
+    {
+      "run": "AB",
+      "directory": "studies/05_ablation/AB",
+      "input_id": "input_0ec0174bfe7f",
+      "packet_outputs": [
+        "135M"
+      ],
+      "records": 1986
+    },
+    {
+      "run": "ABC",
+      "directory": "studies/05_ablation/ABC",
+      "input_id": "input_224c0009f717",
+      "packet_outputs": [
+        "135M"
+      ],
+      "records": 1986
+    },
+    {
+      "run": "r16_ABCD",
+      "directory": "studies/05_ablation/r16_ABCD",
+      "input_id": "input_224c0009f717",
+      "packet_outputs": [
+        "135M"
+      ],
+      "records": 1986
+    },
+    {
+      "run": "r16_ABCDE",
+      "directory": "studies/05_ablation/r16_ABCDE",
+      "input_id": "input_224c0009f717",
+      "packet_outputs": [
+        "135M"
+      ],
+      "records": 1986
+    },
+    {
+      "run": "r8_ABCD",
+      "directory": "studies/05_ablation/r8_ABCD",
+      "input_id": "input_224c0009f717",
+      "packet_outputs": [
+        "135M"
+      ],
+      "records": 1986
+    },
+    {
+      "run": "r8_ABCDE",
+      "directory": "studies/05_ablation/r8_ABCDE",
+      "input_id": "input_224c0009f717",
+      "packet_outputs": [
+        "135M"
+      ],
+      "records": 1986
+    },
+    {
+      "run": "r8_random137",
+      "directory": "studies/03_robustness/r8_random137",
+      "input_id": "input_7bf0f6dd6aac",
+      "packet_outputs": [
+        "135M"
+      ],
+      "records": 1986
+    },
+    {
+      "run": "r8_burst137",
+      "directory": "studies/03_robustness/r8_burst137",
+      "input_id": "input_71e7aa21c29d",
+      "packet_outputs": [
+        "135M"
+      ],
+      "records": 1986
+    },
+    {
+      "run": "r16_random137",
+      "directory": "studies/03_robustness/r16_random137",
+      "input_id": "input_7bf0f6dd6aac",
+      "packet_outputs": [
+        "135M",
+        "TFI"
+      ],
+      "records": 1986
+    },
+    {
+      "run": "r16_burst137",
+      "directory": "studies/03_robustness/r16_burst137",
+      "input_id": "input_71e7aa21c29d",
+      "packet_outputs": [
+        "135M",
+        "TFI"
+      ],
+      "records": 1986
+    }
+  ],
+  "r16_default_random42": {
+    "directory": "studies/01_packet_loss",
+    "method": "135M"
+  },
+  "random42_distilled_r8": "studies/04_lora_rank/r8",
+  "shared_steps": [
+    "AB",
+    "ABC"
+  ]
+}

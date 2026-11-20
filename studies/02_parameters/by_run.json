@@ -1,0 +1,27 @@
+{
+  "r8_distill": {
+    "trainable_parameters": 2442240,
+    "base_parameters": 134515008,
+    "total_parameters": 136957248
+  },
+  "r16_distill": {
+    "trainable_parameters": 4884480,
+    "base_parameters": 134515008,
+    "total_parameters": 139399488
+  },
+  "r32_distill": {
+    "trainable_parameters": 9768960,
+    "base_parameters": 134515008,
+    "total_parameters": 144283968
+  },
+  "r8_truth": {
+    "trainable_parameters": 2442240,
+    "base_parameters": 134515008,
+    "total_parameters": 136957248
+  },
+  "r16_truth": {
+    "trainable_parameters": 4884480,
+    "base_parameters": 134515008,
+    "total_parameters": 139399488
+  }
+}

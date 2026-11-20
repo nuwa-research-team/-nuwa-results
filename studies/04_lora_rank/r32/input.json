@@ -1,0 +1,9 @@
+{
+  "prepared_input": "input_3dfba6ef3952",
+  "classification_order": "concatenate input parts by file name; array index matches input row",
+  "rates": [
+    0.1,
+    0.3,
+    0.5
+  ]
+}

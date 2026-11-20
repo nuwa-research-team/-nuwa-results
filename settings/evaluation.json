@@ -1,0 +1,54 @@
+{
+  "eligible": 3409,
+  "split": {
+    "excluded_duplicate": 91,
+    "test": 662,
+    "train": 2656
+  },
+  "groups": 19,
+  "support": {
+    "chat": 39,
+    "email": 69,
+    "voip": 275,
+    "transfer": 147,
+    "streaming": 132
+  },
+  "mode": {
+    "ordinary": 334,
+    "vpn": 328
+  },
+  "masks": 1986,
+  "pilot_overlap": 62,
+  "new_test": 600,
+  "final_student": {
+    "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+    "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+    "local_files_only": true,
+    "quantization": "none",
+    "max_length": 8192,
+    "max_new_tokens": 4096
+  },
+  "final_lora": {
+    "bias": "none",
+    "lora_alpha": 16,
+    "lora_dropout": 0.05,
+    "r": 8,
+    "target_modules": "all-linear"
+  },
+  "truth_training": {
+    "epochs": 3,
+    "learning_rate": 5e-05,
+    "batch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "warmup_ratio": 0.03,
+    "weight_decay": 0.01,
+    "max_grad_norm": 1.0,
+    "eval_steps": 96,
+    "save_steps": 96,
+    "seed": 42
+  },
+  "adapter_sha256": {
+    "ABCD": "187ad1fa9bf50b284e5a208fd49b676c7c2072493821876e04d6b45ca9b7f723",
+    "ABCDE": "ed07a35fbc579ef5b1d87f27130716c200d9acd91c8d565e743e424be99c0956"
+  }
+}

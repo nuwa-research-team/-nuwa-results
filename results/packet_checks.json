@@ -1,0 +1,77 @@
+{
+  "135M": {
+    "rows": 1986,
+    "valid": 1986,
+    "mae_verified": true
+  },
+  "Gemini": {
+    "rows": 1986,
+    "valid": 1986,
+    "mae_verified": true
+  },
+  "Luna": {
+    "rows": 1986,
+    "valid": 1862,
+    "mae_verified": true
+  },
+  "rank8": {
+    "rows": 1986,
+    "valid": 1986,
+    "mae_verified": true
+  },
+  "rank32": {
+    "rows": 1986,
+    "valid": 1986,
+    "mae_verified": true
+  },
+  "AB": {
+    "rows": 1986,
+    "valid": 1986,
+    "mae_verified": true
+  },
+  "ABC": {
+    "rows": 1986,
+    "valid": 1986,
+    "mae_verified": true
+  },
+  "r16_ABCD": {
+    "rows": 1986,
+    "valid": 1986,
+    "mae_verified": true
+  },
+  "r16_ABCDE": {
+    "rows": 1986,
+    "valid": 1986,
+    "mae_verified": true
+  },
+  "r8_ABCD": {
+    "rows": 1986,
+    "valid": 1986,
+    "mae_verified": true
+  },
+  "r8_ABCDE": {
+    "rows": 1986,
+    "valid": 1986,
+    "mae_verified": true
+  },
+  "r8_random137": {
+    "rows": 1986,
+    "valid": 1986,
+    "mae_verified": true
+  },
+  "r8_burst137": {
+    "rows": 1986,
+    "valid": 1986,
+    "mae_verified": true
+  },
+  "r16_random137": {
+    "rows": 1986,
+    "valid": 1986,
+    "mae_verified": true
+  },
+  "r16_burst137": {
+    "rows": 1986,
+    "valid": 1986,
+    "mae_verified": true
+  }
+}

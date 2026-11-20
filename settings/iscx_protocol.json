@@ -1,0 +1,26 @@
+{
+  "sampling": "All eligible flows from the pilot extraction, with the original capture holdout fixed.",
+  "attribution": "Draper-Gil et al., Characterization of Encrypted and VPN Traffic Using Time-Related Features, ICISSP 2016",
+  "unit": "first up to 32 captured IPv4 TCP/UDP packets per bidirectional five-tuple with 60s idle timeout per file; minimum 20 packets, bidirectional within prefix; magnitude <=1600; exclude IP fragmentation; first endpoint positive",
+  "stop": "single experiment, no tuning on held-out outcomes",
+  "readout": "Fit the six original frozen D4 encoders with fixed standardized logistic readouts on all 2656 clean ISCX training flows. RF and SVM reported separately.",
+  "mirror": "https://www.kaggle.com/datasets/caiyafang/iscx-vpn-nonvpn-2016-complete-pcaps",
+  "official": "https://www.unb.ca/cic/datasets/vpn.html",
+  "checkpoint": "Stage A SmolLM2-135M LoRA distilled on D4",
+  "dataset": "ISCXVPN2016",
+  "uncertainty": "capture-group paired bootstrap on mean classifier accuracy, 2000 draws",
+  "masks": "uniform whole packet 10%,30%,50% with same rows and positions for both imputers",
+  "split": "Reuse pilot held-out capture groups. Exclude complete sequence hashes in expanded ISCX train and D4 student train/validation. Do not select checkpoints or change prompts on these outcomes.",
+  "adapter_sha256": "2adc9f8c52fa7f5893108a2f987f0cbb6a1a1a16096d6d8db39060aa66e387a2",
+  "primary": "SmolLM2-135M LoRA Stage A versus local TFI. Six-classifier mean accuracy, macro-F1 over supported labels, and missing-packet magnitude MAE by loss rate.",
+  "controls": [
+    "Missing",
+    "Nearest",
+    "Linear",
+    "TFI",
+    "Luna P2",
+    "ReSTC Gemini"
+  ],
+  "comparison": "662 held-out flows including 600 outside the pilot test set but from the same 19 capture groups. This measures sample expansion within the same captures.",
+  "cache": "Reuse prior predictions only for equal mask inputs and identical student checkpoint. For teachers require exact request hashes."
+}

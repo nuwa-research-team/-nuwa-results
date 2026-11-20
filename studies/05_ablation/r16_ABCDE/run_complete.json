@@ -1,0 +1,8 @@
+{
+  "rows": 1986,
+  "valid": 1986,
+  "pred_sha256": "7b7ebd9681a7790c35229ce9f194c3fc6202276d92b058a8f41f7ddffaaefd03",
+  "weights": "6eb406054ae7d21f0bea32bb214905a003e1308935b3686feaacac4e266c7039",
+  "host": "5090D",
+  "adapter": "6eb406054ae7d21f0bea32bb214905a003e1308935b3686feaacac4e266c7039"
+}

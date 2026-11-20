@@ -1,0 +1,15 @@
+{
+  "scope": "next round only",
+  "student": "HuggingFaceTB/SmolLM2-135M-Instruct",
+  "lora_rank": 8,
+  "reference_lora_config": {
+    "bias": "none",
+    "lora_alpha": 16,
+    "lora_dropout": 0.05,
+    "r": 8,
+    "target_modules": "all-linear"
+  },
+  "reference": "rank8.json",
+  "previous_ablation": "ablation_v2.json",
+  "previous_ablation_adapter_rank": 16
+}
